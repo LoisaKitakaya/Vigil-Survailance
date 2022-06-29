@@ -1,0 +1,8 @@
+.social {
+  display: flex;
+  justify-content: space-around;
+}
+
+.social-media a {
+    margin: 0 0.5rem;
+}
