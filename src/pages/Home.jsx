@@ -1,20 +1,19 @@
 import PageTitle from "../components/PageTitle";
-import HomeLanding from "../layout/HomeLanding";
+import Footer from "../layout/Footer";
+import Navbar from "../layout/Navbar";
 
 const Home = () => {
   PageTitle("VS | Home");
 
   return (
-    <div className="home">
-      {/* home landing section */}
+    <div className="home container-fluid">
+      {/* navigation */}
+      <Navbar />
+      {/* navigation */}
 
-      {/* intro */}
-      <div className="intro">
-        <HomeLanding />
-      </div>
-      {/* intro */}
-
-      {/* home landing section */}
+      {/* footer */}
+      <Footer />
+      {/* footer */}
     </div>
   );
 };

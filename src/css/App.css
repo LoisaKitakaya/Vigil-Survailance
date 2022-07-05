@@ -1,38 +1,77 @@
 .App {
+  min-height: 100vh !important;
+}
+
+.footer-navbar {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.social-media {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-container .navbar-nav {
+  display: flex !important;
+  flex-direction: column !important;
+  /* justify-content: center; */
+  /* align-items: left; */
+  /* margin-right: 8rem; */
+}
+
+.navbar-nav {
+  /* align-items: center !important; */
+}
+
+.menu-btn {
+  display: none !important;
+}
+
+.navbar-nav .btn {
+  padding: 0.25rem 0.55rem;
+}
+
+.off-menu {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.off-menu .nav-link {
+  padding-bottom: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* media query for responsiveness */
+
+@media screen and (max-width: 600px) {
+  .container {
+    margin: 0 !important;
+    padding: 0 !important;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .footer-container .navbar-nav {
+    display: flex !important;
+    flex-direction: row !important;
+    margin: 1rem 0 !important;
+    text-align: center !important;
   }
-  to {
-    transform: rotate(360deg);
+
+  .footer-container .navbar-nav .nav-link {
+    padding: 0 0.5rem !important;
+  }
+
+  .footer-brand {
+    text-align: center !important;
+  }
+
+  .to-be-hid {
+    display: none !important;
+  }
+
+  .menu-btn {
+    display: initial !important;
+  }
+
+  .just-links {
+    display: none !important;
   }
 }
