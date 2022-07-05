@@ -88,16 +88,23 @@
 
 .reason-container {
   display: flex;
-  /* align-items: center; */
 }
 
 .reason-item .card {
   margin: 1rem;
-  /* min-height: 35%; */
 }
 
 .reason {
   padding: 2rem 0;
+}
+
+.testimonial-container {
+  display: flex;
+}
+
+.testimonial-container .card {
+  margin: 1rem;
+  width: 50%;
 }
 
 /* media query for responsiveness */
@@ -161,5 +168,18 @@
 
   .reason-container {
     flex-wrap: wrap;
+  }
+
+  .reason-item .card {
+    margin: 1rem auto;
+  }
+
+  .testimonial-container {
+    flex-wrap: wrap;
+  }
+
+  .testimonial-container .card {
+    margin: 1rem auto;
+    width: auto;
   }
 }

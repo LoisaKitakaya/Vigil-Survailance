@@ -197,7 +197,53 @@ const Home = () => {
         {/* why work with us */}
         <hr />
         {/* testimonials */}
-        <div className="testimonials"></div>
+        <div className="testimonials">
+          <h1 className="text-center">Testimonials</h1>
+          <br />
+          <div className="testimonial-container">
+            <div className="card">
+              <div className="card-body">
+                <p className="card-text text-center">
+                  "We continuously strive hard to keep our customers and clients
+                  happy. Welcoming customer’s feedback and taking steps
+                  accordingly is what CCTV Monitoring Services spotlights and
+                  will continue to do so."
+                </p>
+                <hr />
+                <h3 className="card-title text-center">Owner</h3>
+                <h6 className="card-subtitle text-center">
+                  Automotive Dealership
+                </h6>
+              </div>
+            </div>
+            <div className="card">
+              <div className="card-body">
+                <p className="card-text text-center">
+                  "CCTVmonitoring.com staff is well-trained and do their job
+                  with accuracy, Honest, reliable, and are dedicated to their
+                  roles and responsibility. Highly recommend them!"
+                </p>
+                <hr />
+                <h3 className="card-title text-center">Chief Executive</h3>
+                <h6 className="card-subtitle text-center">
+                  Community Hall {"&"} Event Center
+                </h6>
+              </div>
+            </div>
+            <div className="card">
+              <div className="card-body">
+                <p className="card-text text-center">
+                  "Once you sign up with the CCTVMonitoring.com team, their
+                  trained professionals take the responsibility of watching your
+                  premises as their own business and keep you updated 24X7."
+                </p>
+                <hr />
+                <h3 className="card-title text-center">Owner</h3>
+                <h6 className="card-subtitle text-center">Electronic Store</h6>
+              </div>
+            </div>
+          </div>
+        </div>
         {/* testimonials */}
       </div>
       {/* body */}
