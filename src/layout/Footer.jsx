@@ -3,7 +3,7 @@ import "../css/App.css";
 const Footer = () => {
   return (
     <div className="footer">
-      <div className="navbar footer-navbar navbar-expand-lg">
+      <div className="navbar topbar footer-navbar navbar-expand-lg bot-light">
         <div className="container-fluid footer-container">
           <div className="footer-brand">
             <h4>Vigil Surveillance</h4>
@@ -25,7 +25,7 @@ const Footer = () => {
                 <i class="bi bi-instagram fs-4 text-danger"></i>
               </a>
               <a href="#">
-                <i class="bi bi-linkedin fs-4 text-dark"></i>
+                <i class="bi bi-linkedin fs-4 text-link"></i>
               </a>
             </div>
           </div>

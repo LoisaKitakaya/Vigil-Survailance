@@ -10,7 +10,7 @@ const Navbar = () => {
   const handleShow = () => setShow(true);
 
   return (
-    <div className="navbar navbar-expand-lg">
+    <div className="navbar navbar-expand-lg topbar top-light">
       <div className="container-fluid">
         <div className="logo">
           <a href="#" className="navbar-brand fs-4 nav-link-color">
