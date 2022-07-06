@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../css/App.css";
 
 const Footer = () => {
@@ -30,21 +31,21 @@ const Footer = () => {
             </div>
           </div>
           <div className="navbar-nav">
-            <a href="#" className="nav-link to-be-hid">
+            <Link to={'/about'} className="nav-link to-be-hid">
               About
-            </a>
-            <a href="#" className="nav-link to-be-hid">
-              Contact
-            </a>
+            </Link>
+            <Link to={'/services'} className="nav-link to-be-hid">
+              Services
+            </Link>
             <a href="#" className="nav-link">
               Vigil Shop
             </a>
-            <a href="#" className="nav-link">
+            <Link to={'/work'} className="nav-link">
               Work at Vigil
-            </a>
-            <a href="#" className="nav-link">
+            </Link>
+            <Link to={'/privacy'} className="nav-link">
               Privacy policy
-            </a>
+            </Link>
           </div>
         </div>
       </div>

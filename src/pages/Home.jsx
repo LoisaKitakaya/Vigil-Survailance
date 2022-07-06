@@ -7,6 +7,7 @@ import Navbar from "../layout/Navbar";
 import prof from "../assets/profesional.jpg";
 import spinner from "../assets/Settings.gif";
 import "../css/animation.css";
+import { Link } from "react-router-dom";
 
 const GET_RECENT = gql`
   query {
@@ -75,24 +76,24 @@ const Home = () => {
             </p>
             <br />
             <div className="intro-links">
-              <a href="#" className="btn btn-dark">
+              <Link to={"/services"} className="btn btn-dark">
                 Services <i className="bi bi-arrow-right-short"></i>
-              </a>
-              <a href="#" className="btn btn-dark">
+              </Link>
+              <Link to={"/portfolio"} className="btn btn-dark">
                 Portfolio <i className="bi bi-arrow-right-short"></i>
-              </a>
-              <a href="#" className="btn btn-dark">
+              </Link>
+              <Link to={"/blog"} className="btn btn-dark">
                 Blog <i className="bi bi-arrow-right-short"></i>
-              </a>
+              </Link>
               <a href="#" className="btn btn-dark">
                 Shop <i className="bi bi-arrow-right-short"></i>
               </a>
-              <a href="#" className="btn btn-dark">
+              <Link to={"/quote"} className="btn btn-dark">
                 Get Quote <i className="bi bi-arrow-right-short"></i>
-              </a>
-              <a href="#" className="btn btn-dark">
+              </Link>
+              <Link to={"/about"} className="btn btn-dark">
                 About <i className="bi bi-arrow-right-short"></i>
-              </a>
+              </Link>
             </div>
           </div>
           {/* ///s */}
@@ -116,7 +117,7 @@ const Home = () => {
                   className="form-control"
                   placeholder="name@example.com"
                 />
-                <label htmlFor="name">Your name</label>
+                <label htmlhtmlFor="name">Your name</label>
               </div>
               <div className="form-floating mb-3">
                 <input
@@ -125,7 +126,7 @@ const Home = () => {
                   className="form-control"
                   placeholder="name@example.com"
                 />
-                <label htmlFor="email">Email address</label>
+                <label htmlhtmlFor="email">Email address</label>
               </div>
               <div className="form-floating mb-3">
                 <input
@@ -134,7 +135,7 @@ const Home = () => {
                   className="form-control"
                   placeholder="name@example.com"
                 />
-                <label htmlFor="phone">Phone number</label>
+                <label htmlhtmlFor="phone">Phone number</label>
               </div>
               <button type="submit" className="btn btn-warning container-fluid">
                 Get a call back

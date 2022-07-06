@@ -24,116 +24,119 @@ const Quote = () => {
             <form action="#" className="bg-dark text-light">
               <div className="row text-dark">
                 <div className="col-6">
-                  <div class="form-floating mb-3">
+                  <div className="form-floating mb-3">
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       name="firstname"
                       placeholder="First Name"
                     />
-                    <label for="firstname">First name</label>
+                    <label htmlFor="firstname">First name</label>
                   </div>
-                  <div class="form-floating mb-3">
+                  <div className="form-floating mb-3">
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       name="secondname"
                       placeholder="Second Name"
                     />
-                    <label for="secondname">Second name</label>
+                    <label htmlFor="secondname">Second name</label>
                   </div>
-                  <div class="form-floating mb-3">
+                  <div className="form-floating mb-3">
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       name="company"
                       placeholder="Company Name"
                     />
-                    <label for="company">Company name</label>
+                    <label htmlFor="company">Company name</label>
                   </div>
                 </div>
                 <div className="col-6">
-                  <div class="form-floating mb-3">
+                  <div className="form-floating mb-3">
                     <input
                       type="email"
-                      class="form-control"
+                      className="form-control"
                       name="email"
                       placeholder="Email address"
                     />
-                    <label for="email">Email address</label>
+                    <label htmlFor="email">Email address</label>
                   </div>
-                  <div class="form-floating mb-3">
+                  <div className="form-floating mb-3">
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       name="city"
                       placeholder="City Name"
                     />
-                    <label for="city">City/town</label>
+                    <label htmlFor="city">City/town</label>
                   </div>
-                  <div class="form-floating mb-3">
+                  <div className="form-floating mb-3">
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       name="phone"
                       placeholder="Phone Number"
                     />
-                    <label for="phone">Phone</label>
+                    <label htmlFor="phone">Phone</label>
                   </div>
                 </div>
                 <div className="check-boxes text-light">
-                  <div class="form-check">
+                  <div className="form-check">
                     <input
-                      class="form-check-input"
+                      className="form-check-input"
                       type="checkbox"
                       value=""
                       name="alarmsystem"
                     />
-                    <label class="form-check-label" for="alarmsystem">
+                    <label className="form-check-label" htmlFor="alarmsystem">
                       Alarm system
                     </label>
                   </div>
-                  <div class="form-check">
+                  <div className="form-check">
                     <input
-                      class="form-check-input"
+                      className="form-check-input"
                       type="checkbox"
                       value=""
                       name="videomonitoring"
                     />
-                    <label class="form-check-label" for="videomonitoring">
+                    <label
+                      className="form-check-label"
+                      htmlFor="videomonitoring"
+                    >
                       Video monitoring
                     </label>
                   </div>
-                  <div class="form-check">
+                  <div className="form-check">
                     <input
-                      class="form-check-input"
+                      className="form-check-input"
                       type="checkbox"
                       value=""
                       name="electronic"
                     />
-                    <label class="form-check-label" for="electronic">
+                    <label className="form-check-label" htmlFor="electronic">
                       Electronic security
                     </label>
                   </div>
-                  <div class="form-check">
+                  <div className="form-check">
                     <input
-                      class="form-check-input"
+                      className="form-check-input"
                       type="checkbox"
                       value=""
                       name="automotive"
                     />
-                    <label class="form-check-label" for="automotive">
+                    <label className="form-check-label" htmlFor="automotive">
                       Automotive tracking
                     </label>
                   </div>
-                  <div class="form-check">
+                  <div className="form-check">
                     <input
-                      class="form-check-input"
+                      className="form-check-input"
                       type="checkbox"
                       value=""
                       name="equipment"
                     />
-                    <label class="form-check-label" for="equipment">
+                    <label className="form-check-label" htmlFor="equipment">
                       Surveillance equipment
                     </label>
                   </div>
@@ -141,7 +144,10 @@ const Quote = () => {
               </div>
               <br />
               <div className="container-fluid">
-                <button type="submit" class="btn btn-warning container-fluid">
+                <button
+                  type="submit"
+                  className="btn btn-warning container-fluid"
+                >
                   Submit
                 </button>
               </div>

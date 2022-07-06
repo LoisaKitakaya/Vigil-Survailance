@@ -1,5 +1,6 @@
 import { Offcanvas } from "react-bootstrap";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import "../css/App.css";
 
@@ -13,32 +14,29 @@ const Navbar = () => {
     <div className="navbar bg-light navbar-expand-lg topbar top-light">
       <div className="container-fluid">
         <div className="logo">
-          <a href="#" className="navbar-brand fs-4 nav-link-color">
+          <Link to={"/"} className="navbar-brand fs-4 nav-link-color">
             Vigil Surveillance
-          </a>
+          </Link>
         </div>
         <div className="navbar-nav d-flex">
-          <a href="#" className="nav-link just-links">
+          <Link to={"/services"} className="nav-link just-links">
             Services
-          </a>
-          <a href="#" className="nav-link just-links">
+          </Link>
+          <Link to={"/quote"} className="nav-link just-links">
             Get Quote
-          </a>
+          </Link>
           <a href="#" className="nav-link just-links">
             Vigil Shop
           </a>
-          <a href="#" className="nav-link just-links">
+          <Link to={"/portfolio"} className="nav-link just-links">
             Portfolio
-          </a>
-          <a href="#" className="nav-link just-links">
+          </Link>
+          <Link to={"/blog"} className="nav-link just-links">
             Blog
-          </a>
-          <a href="#" className="nav-link just-links">
+          </Link>
+          <Link to={"/about"} className="nav-link just-links">
             About
-          </a>
-          <a href="#" className="nav-link just-links">
-            Contact
-          </a>
+          </Link>
           <a className="btn nav-link menu-btn" href="#" onClick={handleShow}>
             <i className="bi bi-list fs-2"></i>
           </a>
@@ -51,27 +49,27 @@ const Navbar = () => {
         </Offcanvas.Header>
         <Offcanvas.Body>
           <div className="off-menu fs-3">
-            <a href="#" className="nav-link">
+            <Link to={"/"} className="nav-link">
+              Home
+            </Link>
+            <Link to={"/services"} className="nav-link">
               Services
-            </a>
-            <a href="#" className="nav-link">
+            </Link>
+            <Link to={"/quote"} className="nav-link">
               Get Quote
-            </a>
+            </Link>
             <a href="#" className="nav-link">
               Vigil Shop
             </a>
-            <a href="#" className="nav-link">
+            <Link to={"/portfolio"} className="nav-link">
               Portfolio
-            </a>
-            <a href="#" className="nav-link">
+            </Link>
+            <Link to={"blog"} className="nav-link">
               Blog
-            </a>
-            <a href="#" className="nav-link">
+            </Link>
+            <Link to={"/about"} className="nav-link">
               About
-            </a>
-            <a href="#" className="nav-link">
-              Contact
-            </a>
+            </Link>
           </div>
         </Offcanvas.Body>
       </Offcanvas>
