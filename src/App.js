@@ -3,6 +3,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import { Routes, Route } from "react-router-dom";
 
 import "./css/App.css";
+import About from "./pages/About";
 
 import Home from "./pages/Home";
 import Quote from "./pages/Quote";
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/quote" element={<Quote />} />
+          <Route path="/about" element={<About />} />
         </Routes>
         {/* app routes */}
       </div>

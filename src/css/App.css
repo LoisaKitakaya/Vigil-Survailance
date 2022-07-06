@@ -139,7 +139,8 @@
 }
 
 .services-container,
-.quote-container {
+.quote-container,
+.about-container {
   margin: 2rem auto;
 }
 
@@ -160,14 +161,20 @@
   justify-content: space-evenly;
 }
 
-/* .check-boxes .form-check {
-  margin-right: 1rem;
-} */
+.about-sub {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
 
-/* .quote-form form .btn {
-  width: 80%;
-  text-align: center;
-} */
+.about-cont {
+  margin: 0 1rem;
+}
+
+.about-cont img {
+  border-radius: 0.5rem;
+}
 
 /* media query for responsiveness */
 
@@ -271,5 +278,18 @@
 
   .quote-form form .row .col-6 {
     width: 100% !important;
+  }
+
+  .about-sub {
+    flex-wrap: wrap;
+  }
+
+  .about-cont {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .about-cont img {
+    width: 95%;
   }
 }
