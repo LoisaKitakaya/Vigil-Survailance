@@ -138,6 +138,10 @@
   opacity: 0.9;
 }
 
+.services-container {
+  margin: 2rem auto;
+}
+
 /* media query for responsiveness */
 
 @media screen and (max-width: 600px) {

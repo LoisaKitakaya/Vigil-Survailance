@@ -32,7 +32,7 @@ const Home = () => {
     return (
       <div className="App">
         <div className="animation-container">
-          <div class="loader">
+          <div className="loader">
             <img src={spinner} alt="..." />
           </div>
           <div className="loader-text">
@@ -46,7 +46,7 @@ const Home = () => {
     return (
       <div className="App">
         <div className="animation-container">
-          <div class="loader">
+          <div className="loader">
             <h1>Error!</h1>
           </div>
           <div className="loader-text">
