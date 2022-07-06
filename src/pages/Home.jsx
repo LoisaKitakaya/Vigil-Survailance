@@ -1,4 +1,5 @@
 import { useQuery, gql } from "@apollo/client";
+import { Link } from "react-router-dom";
 
 import PageTitle from "../components/PageTitle";
 import Footer from "../layout/Footer";
@@ -7,7 +8,6 @@ import Navbar from "../layout/Navbar";
 import prof from "../assets/profesional.jpg";
 import spinner from "../assets/Settings.gif";
 import "../css/animation.css";
-import { Link } from "react-router-dom";
 
 const GET_RECENT = gql`
   query {

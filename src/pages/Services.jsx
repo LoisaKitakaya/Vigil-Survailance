@@ -1,4 +1,5 @@
 import { Accordion } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 import PageTitle from "../components/PageTitle";
 import Footer from "../layout/Footer";
@@ -53,9 +54,9 @@ const Services = () => {
                         We provide a full range of security services contact us
                         for a free consultation today
                       </p>
-                      <a href="#" className="btn btn-dark">
+                      <Link to={"/quote"} className="btn btn-dark">
                         Get free quote
-                      </a>
+                      </Link>
                     </blockquote>
                   </div>
                 </div>
@@ -134,9 +135,9 @@ const Services = () => {
                         We provide a full range of security services contact us
                         for a free consultation today
                       </p>
-                      <a href="#" className="btn btn-dark">
+                      <Link to={"/quote"} className="btn btn-dark">
                         Get free quote
-                      </a>
+                      </Link>
                     </blockquote>
                   </div>
                 </div>
@@ -195,9 +196,9 @@ const Services = () => {
                         We provide a full range of security services contact us
                         for a free consultation today
                       </p>
-                      <a href="#" className="btn btn-dark">
+                      <Link to={"/quote"} className="btn btn-dark">
                         Get free quote
-                      </a>
+                      </Link>
                     </blockquote>
                   </div>
                 </div>
@@ -237,9 +238,9 @@ const Services = () => {
                         We provide a full range of security services contact us
                         for a free consultation today
                       </p>
-                      <a href="#" className="btn btn-dark">
+                      <Link to={"/quote"} className="btn btn-dark">
                         Get free quote
-                      </a>
+                      </Link>
                     </blockquote>
                   </div>
                 </div>
@@ -286,9 +287,9 @@ const Services = () => {
                         We provide a full range of security services contact us
                         for a free consultation today
                       </p>
-                      <a href="#" className="btn btn-dark">
+                      <Link to={"/quote"} className="btn btn-dark">
                         Get free quote
-                      </a>
+                      </Link>
                     </blockquote>
                   </div>
                 </div>
