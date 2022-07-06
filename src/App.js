@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import "./css/App.css";
 
 import Home from "./pages/Home";
+import Quote from "./pages/Quote";
 import Services from "./pages/Services";
 
 const client = new ApolloClient({
@@ -20,6 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/quote" element={<Quote />} />
         </Routes>
         {/* app routes */}
       </div>
