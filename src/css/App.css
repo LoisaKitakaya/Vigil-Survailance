@@ -107,6 +107,37 @@
   width: 50%;
 }
 
+.testimonials {
+  margin: 2rem auto;
+}
+
+.card {
+  background-color: whitesmoke !important;
+}
+
+.recent-posts {
+  margin: 2rem 0;
+}
+
+.recent-posts .recent-post-container {
+  margin: 1rem 0 !important;
+  display: flex;
+}
+
+.recent-post-container .card {
+  width: 40% !important;
+  margin: 1rem;
+}
+
+.recent-post-container .card:hover {
+  transform: scale(1.025);
+  cursor: pointer;
+}
+
+.navbar {
+  opacity: 0.9;
+}
+
 /* media query for responsiveness */
 
 @media screen and (max-width: 600px) {
@@ -182,4 +213,14 @@
     margin: 1rem auto;
     width: auto;
   }
+
+  .recent-posts .recent-post-container {
+    flex-wrap: wrap;
+  }
+
+  .recent-post-container .card {
+    width: 100% !important;
+    margin: 1rem auto;
+  }
 }
+

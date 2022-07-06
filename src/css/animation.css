@@ -1,0 +1,13 @@
+.animation-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.loader {
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  padding-top: 17rem;
+}

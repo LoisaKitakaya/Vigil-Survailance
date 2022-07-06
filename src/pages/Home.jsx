@@ -1,10 +1,60 @@
+import { useQuery, gql } from "@apollo/client";
+
 import PageTitle from "../components/PageTitle";
 import Footer from "../layout/Footer";
 import Navbar from "../layout/Navbar";
+
 import prof from "../assets/profesional.jpg";
+import spinner from "../assets/Settings.gif";
+import "../css/animation.css";
+
+const GET_RECENT = gql`
+  query {
+    posts(first: 3, orderBy: date_DESC) {
+      id
+      title
+      slug
+      coverImage {
+        url
+      }
+      date
+    }
+  }
+`;
 
 const Home = () => {
-  PageTitle("VS | Home");
+  PageTitle("Vigil | Home");
+
+  const { loading, error, data } = useQuery(GET_RECENT);
+  console.log(data);
+
+  if (loading)
+    return (
+      <div className="App">
+        <div className="animation-container">
+          <div class="loader">
+            <img src={spinner} alt="..." />
+          </div>
+          <div className="loader-text">
+            <h2>Loading...</h2>
+          </div>
+        </div>
+      </div>
+    );
+
+  if (error)
+    return (
+      <div className="App">
+        <div className="animation-container">
+          <div class="loader">
+            <h1>Error!</h1>
+          </div>
+          <div className="loader-text">
+            <h2>Something went wrong!</h2>
+          </div>
+        </div>
+      </div>
+    );
 
   return (
     <div className="home">
@@ -26,22 +76,22 @@ const Home = () => {
             <br />
             <div className="intro-links">
               <a href="#" className="btn btn-dark">
-                Services <i class="bi bi-arrow-right-short"></i>
+                Services <i className="bi bi-arrow-right-short"></i>
               </a>
               <a href="#" className="btn btn-dark">
-                Portfolio <i class="bi bi-arrow-right-short"></i>
+                Portfolio <i className="bi bi-arrow-right-short"></i>
               </a>
               <a href="#" className="btn btn-dark">
-                Blog <i class="bi bi-arrow-right-short"></i>
+                Blog <i className="bi bi-arrow-right-short"></i>
               </a>
               <a href="#" className="btn btn-dark">
-                Shop <i class="bi bi-arrow-right-short"></i>
+                Shop <i className="bi bi-arrow-right-short"></i>
               </a>
               <a href="#" className="btn btn-dark">
-                Pricing <i class="bi bi-arrow-right-short"></i>
+                Get Quote <i className="bi bi-arrow-right-short"></i>
               </a>
               <a href="#" className="btn btn-dark">
-                About <i class="bi bi-arrow-right-short"></i>
+                About <i className="bi bi-arrow-right-short"></i>
               </a>
             </div>
           </div>
@@ -51,7 +101,7 @@ const Home = () => {
               <div className="profesional text-center text-light">
                 <img
                   src={prof}
-                  class="img-thumbnail rounded mx-auto d-block"
+                  className="img-thumbnail rounded mx-auto d-block"
                   alt="..."
                 ></img>
                 <br />
@@ -59,34 +109,34 @@ const Home = () => {
                 <p>Digital Security Expert</p>
                 <p>(+254) 725 131 828</p>
               </div>
-              <div class="form-floating mb-3">
+              <div className="form-floating mb-3">
                 <input
                   type="text"
                   name="name"
-                  class="form-control"
+                  className="form-control"
                   placeholder="name@example.com"
                 />
-                <label for="name">Your name</label>
+                <label htmlFor="name">Your name</label>
               </div>
-              <div class="form-floating mb-3">
+              <div className="form-floating mb-3">
                 <input
                   type="email"
                   name="email"
-                  class="form-control"
+                  className="form-control"
                   placeholder="name@example.com"
                 />
-                <label for="email">Email address</label>
+                <label htmlFor="email">Email address</label>
               </div>
-              <div class="form-floating mb-3">
+              <div className="form-floating mb-3">
                 <input
                   type="text"
                   name="phone"
-                  class="form-control"
+                  className="form-control"
                   placeholder="name@example.com"
                 />
-                <label for="phone">Phone number</label>
+                <label htmlFor="phone">Phone number</label>
               </div>
-              <button type="submit" class="btn btn-warning container-fluid">
+              <button type="submit" className="btn btn-warning container-fluid">
                 Get a call back
               </button>
               {/* <hr />
@@ -107,7 +157,7 @@ const Home = () => {
               <div className="card">
                 <div className="card-body">
                   <h6 className="card-subtitle text-center">
-                    <i class="bi bi-cash-stack fs-1"></i>
+                    <i className="bi bi-cash-stack fs-1"></i>
                   </h6>
                   <h3 className="card-title text-center">No Hidden Costs</h3>
                   <p className="card-text text-center">
@@ -121,7 +171,7 @@ const Home = () => {
               <div className="card">
                 <div className="card-body">
                   <h6 className="card-subtitle text-center">
-                    <i class="bi bi-clock fs-1"></i>
+                    <i className="bi bi-clock fs-1"></i>
                   </h6>
                   <h3 className="card-title text-center">Punctual</h3>
                   <p className="card-text text-center">
@@ -134,7 +184,7 @@ const Home = () => {
               <div className="card">
                 <div className="card-body">
                   <h6 className="card-subtitle text-center">
-                    <i class="bi bi-headset fs-1"></i>
+                    <i className="bi bi-headset fs-1"></i>
                   </h6>
                   <h3 className="card-title text-center">
                     After Sales Support
@@ -150,7 +200,7 @@ const Home = () => {
               <div className="card">
                 <div className="card-body">
                   <h6 className="card-subtitle text-center">
-                    <i class="bi bi-hand-thumbs-up fs-1"></i>
+                    <i className="bi bi-hand-thumbs-up fs-1"></i>
                   </h6>
                   <h3 className="card-title text-center">
                     Satisfaction Guaranteed
@@ -164,7 +214,7 @@ const Home = () => {
               <div className="card">
                 <div className="card-body">
                   <h6 className="card-subtitle text-center">
-                    <i class="bi bi-building fs-1"></i>
+                    <i className="bi bi-building fs-1"></i>
                   </h6>
                   <h3 className="card-title text-center">
                     Protect Your Property
@@ -178,7 +228,7 @@ const Home = () => {
               <div className="card">
                 <div className="card-body">
                   <h6 className="card-subtitle text-center">
-                    <i class="bi bi-graph-up-arrow fs-1"></i>
+                    <i className="bi bi-graph-up-arrow fs-1"></i>
                   </h6>
                   <h3 className="card-title text-center">
                     Continous Improvement
@@ -199,6 +249,9 @@ const Home = () => {
         {/* testimonials */}
         <div className="testimonials">
           <h1 className="text-center">Testimonials</h1>
+          <h4 className="text-center">
+            Don’t Just Take Our Word For It, Read It From Them
+          </h4>
           <br />
           <div className="testimonial-container">
             <div className="card">
@@ -245,6 +298,39 @@ const Home = () => {
           </div>
         </div>
         {/* testimonials */}
+        <hr />
+        {/* recent posts */}
+        <div className="recent-posts">
+          <h1 className="text-center">Recent Posts</h1>
+          <h4 className="text-center">
+            Articles, blogs and news related to surveillance
+          </h4>
+          <br />
+          <div className="recent-post-container">
+            {data.posts.map((article, index) => {
+              const list = (
+                <>
+                  <div className="card mb-3" key={index}>
+                    <img
+                      src={article.coverImage.url}
+                      className="card-img-top img-fluid"
+                      alt="..."
+                    />
+                    <div className="card-body">
+                      <h5 className="card-title">{article.title}</h5>
+                      <p className="card-text">
+                        <small className="text-muted">{article.date}</small>
+                      </p>
+                    </div>
+                  </div>
+                </>
+              );
+
+              return list;
+            })}
+          </div>
+        </div>
+        {/* recent posts */}
       </div>
       {/* body */}
 

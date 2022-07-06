@@ -10,7 +10,7 @@ const Navbar = () => {
   const handleShow = () => setShow(true);
 
   return (
-    <div className="navbar navbar-expand-lg topbar top-light">
+    <div className="navbar bg-light navbar-expand-lg topbar top-light">
       <div className="container-fluid">
         <div className="logo">
           <a href="#" className="navbar-brand fs-4 nav-link-color">
@@ -22,7 +22,7 @@ const Navbar = () => {
             Services
           </a>
           <a href="#" className="nav-link just-links">
-            Pricing
+            Get Quote
           </a>
           <a href="#" className="nav-link just-links">
             Vigil Shop
@@ -40,7 +40,7 @@ const Navbar = () => {
             Contact
           </a>
           <a className="btn nav-link menu-btn" href="#" onClick={handleShow}>
-            <i class="bi bi-list fs-2"></i>
+            <i className="bi bi-list fs-2"></i>
           </a>
         </div>
       </div>
@@ -55,7 +55,7 @@ const Navbar = () => {
               Services
             </a>
             <a href="#" className="nav-link">
-              Pricing
+              Get Quote
             </a>
             <a href="#" className="nav-link">
               Vigil Shop
