@@ -13,37 +13,40 @@ const Footer = () => {
               <p>© 2022 • vigilsurvaillance.com</p>
             </div>
             <br />
-            <p>Live Video Surveillance and CCTV Monitoring Center</p>
+            <p>
+              Email: <em>kitakayaloisa@gmail.com</em> <strong>|</strong> Phone:{" "}
+              <em>+254 725 131 828</em>
+            </p>
             <br />
             <div className="social-media">
-              <a href="#">
+              <a href="https://loremipsum.io/generator/">
                 <i className="bi bi-facebook fs-4 text-link"></i>
               </a>
-              <a href="#">
+              <a href="https://loremipsum.io/generator/">
                 <i className="bi bi-twitter fs-4 text-info"></i>
               </a>
-              <a href="#">
+              <a href="https://loremipsum.io/generator/">
                 <i className="bi bi-instagram fs-4 text-danger"></i>
               </a>
-              <a href="#">
+              <a href="https://loremipsum.io/generator/">
                 <i className="bi bi-linkedin fs-4 text-link"></i>
               </a>
             </div>
           </div>
           <div className="navbar-nav">
-            <Link to={'/about'} className="nav-link to-be-hid">
+            <Link to={"/about"} className="nav-link to-be-hid">
               About
             </Link>
-            <Link to={'/services'} className="nav-link to-be-hid">
+            <Link to={"/services"} className="nav-link to-be-hid">
               Services
             </Link>
-            <a href="#" className="nav-link">
+            <a href="https://loremipsum.io/generator/" className="nav-link">
               Vigil Shop
             </a>
-            <Link to={'/work'} className="nav-link">
+            <Link to={"/work"} className="nav-link">
               Work at Vigil
             </Link>
-            <Link to={'/privacy'} className="nav-link">
+            <Link to={"/privacy"} className="nav-link">
               Privacy policy
             </Link>
           </div>

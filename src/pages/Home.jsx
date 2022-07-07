@@ -9,6 +9,7 @@ import Navbar from "../layout/Navbar";
 
 import prof from "../assets/profesional.jpg";
 import spinner from "../assets/Settings.gif";
+import homeimage from '../assets/home.jpg'
 
 const GET_RECENT = gql`
   query {
@@ -77,25 +78,8 @@ const Home = () => {
               Your Property.
             </p>
             <br />
-            <div className="intro-links">
-              <Link to={"/services"} className="btn btn-dark">
-                Services <i className="bi bi-arrow-right-short"></i>
-              </Link>
-              <Link to={"/portfolio"} className="btn btn-dark">
-                Portfolio <i className="bi bi-arrow-right-short"></i>
-              </Link>
-              <Link to={"/blog"} className="btn btn-dark">
-                Blog <i className="bi bi-arrow-right-short"></i>
-              </Link>
-              <a href="#" className="btn btn-dark">
-                Shop <i className="bi bi-arrow-right-short"></i>
-              </a>
-              <Link to={"/quote"} className="btn btn-dark">
-                Get Quote <i className="bi bi-arrow-right-short"></i>
-              </Link>
-              <Link to={"/about"} className="btn btn-dark">
-                About <i className="bi bi-arrow-right-short"></i>
-              </Link>
+            <div className="intro-img">
+            <img src={homeimage} className='img-fluid rounded' alt="..." />
             </div>
           </div>
           {/* ///s */}

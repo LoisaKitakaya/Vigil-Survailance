@@ -25,7 +25,10 @@ const Navbar = () => {
           <Link to={"/quote"} className="nav-link just-links">
             Get Quote
           </Link>
-          <a href="#" className="nav-link just-links">
+          <a
+            href="https://loremipsum.io/generator/"
+            className="nav-link just-links"
+          >
             Vigil Shop
           </a>
           <Link to={"/portfolio"} className="nav-link just-links">
@@ -37,9 +40,9 @@ const Navbar = () => {
           <Link to={"/about"} className="nav-link just-links">
             About
           </Link>
-          <a className="btn nav-link menu-btn" href="#" onClick={handleShow}>
+          <button className="btn nav-link menu-btn" onClick={handleShow}>
             <i className="bi bi-list fs-2"></i>
-          </a>
+          </button>
         </div>
       </div>
       {/* off menu */}
@@ -58,7 +61,7 @@ const Navbar = () => {
             <Link to={"/quote"} className="nav-link">
               Get Quote
             </Link>
-            <a href="#" className="nav-link">
+            <a href="https://loremipsum.io/generator/" className="nav-link">
               Vigil Shop
             </a>
             <Link to={"/portfolio"} className="nav-link">
