@@ -207,6 +207,7 @@
 .document .content {
   background-color: white;
   padding: 0 1rem;
+  font-size: large;
 }
 
 /* media query for responsiveness */
