@@ -5,9 +5,11 @@ import { Routes, Route } from "react-router-dom";
 import "./css/App.css";
 
 import About from "./pages/About";
+import Article from "./pages/Article";
 import Blog from "./pages/Blog";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
+import Project from "./pages/Project";
 import Quote from "./pages/Quote";
 import Services from "./pages/Services";
 
@@ -28,6 +30,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/article/:slug" element={<Article />} />
+          <Route path="/project/:slug" element={<Project />} />
         </Routes>
         {/* app routes */}
       </div>

@@ -1,20 +1,22 @@
 import { useQuery, gql } from "@apollo/client";
 import { Link } from "react-router-dom";
 
+import "../css/animation.css";
+
 import PageTitle from "../components/PageTitle";
 import Footer from "../layout/Footer";
 import Navbar from "../layout/Navbar";
 
 import prof from "../assets/profesional.jpg";
 import spinner from "../assets/Settings.gif";
-import "../css/animation.css";
 
 const GET_RECENT = gql`
   query {
     posts(first: 3, orderBy: date_DESC) {
       id
-      title
       slug
+      title
+      snippet
       coverImage {
         url
       }
@@ -311,19 +313,26 @@ const Home = () => {
             {data.posts.map((article, index) => {
               const list = (
                 <>
-                  <div className="card mb-3" key={index}>
-                    <img
-                      src={article.coverImage.url}
-                      className="card-img-top img-fluid"
-                      alt="..."
-                    />
-                    <div className="card-body">
-                      <h5 className="card-title">{article.title}</h5>
-                      <p className="card-text">
-                        <small className="text-muted">{article.date}</small>
-                      </p>
+                  <Link
+                    to={`/article/${article.slug}`}
+                    key={index}
+                    className="slug-link text-dark"
+                  >
+                    <div className="card mb-3">
+                      <img
+                        src={article.coverImage.url}
+                        className="card-img-top img-fluid"
+                        alt="..."
+                      />
+                      <div className="card-body">
+                        <h5 className="card-title">{article.title}</h5>
+                        <p class="card-text">{article.snippet}</p>
+                        <p className="card-text">
+                          <small className="text-muted">{article.date}</small>
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 </>
               );
 

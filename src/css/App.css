@@ -125,13 +125,14 @@
 }
 
 .recent-post-container .card {
-  width: 40% !important;
+  /* width: 40% !important; */
   margin: 1rem;
+  transition-duration: 300ms !important;
+  transition-timing-function: ease-in-out !important;
 }
 
 .recent-post-container .card:hover {
   transform: scale(1.025);
-  cursor: pointer;
 }
 
 .navbar {
@@ -140,7 +141,11 @@
 
 .services-container,
 .quote-container,
-.about-container {
+.about-container,
+.blog-container,
+.portfolio-container,
+.article-container,
+.project-container {
   margin: 2rem auto;
 }
 
@@ -174,6 +179,34 @@
 
 .about-cont img {
   border-radius: 0.5rem;
+}
+
+.card-card {
+  width: fit-content;
+  margin: auto;
+}
+
+.slug-link {
+  text-decoration: none !important;
+}
+
+.slug-link .card:hover {
+  transform: scale(1.015) !important;
+}
+
+.slug-link .card {
+  transition-duration: 300ms !important;
+  transition-timing-function: ease-in-out !important;
+}
+
+.document {
+  width: 90%;
+  margin: auto;
+}
+
+.document .content {
+  background-color: white;
+  padding: 0 1rem;
 }
 
 /* media query for responsiveness */
@@ -291,5 +324,9 @@
 
   .about-cont img {
     width: 95%;
+  }
+
+  .document {
+    width: auto;
   }
 }
