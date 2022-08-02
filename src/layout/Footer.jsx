@@ -4,7 +4,7 @@ import "../css/layout.css";
 const Footer = () => {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg bg-secondary text-light">
+      <nav className="navbar navbar-expand-lg bg-secondary text-light to-hide">
         <div className="container contact-links">
           <div className="contact-link">
             <div className="top-links">
@@ -124,7 +124,7 @@ const Footer = () => {
         </div>
       </nav>
       {/* separator */}
-      <nav className="navbar navbar-expand-lg bg-secondary top-sub-footer text-light">
+      <nav className="navbar navbar-expand-lg bg-secondary top-sub-footer text-light to-hide">
         <div className="container footer-links">
           <div>
             <small>

@@ -1,8 +1,6 @@
 import { useQuery, gql } from "@apollo/client";
 import { Link } from "react-router-dom";
 
-import "../css/animation.css";
-
 import PageTitle from "../components/PageTitle";
 import IntroBanner from "../layout/IntroBanner";
 
@@ -78,8 +76,8 @@ const Home = ({ loader }) => {
               </div>
             </div>
             {/* ///s */}
-            <div className="intro-form">
-              <form action="#" className="bg-dark">
+            <form action="#" className="card bg-dark">
+              <div className="card-body">
                 <div className="profesional text-center text-light">
                   <img
                     src={prof}
@@ -89,7 +87,6 @@ const Home = ({ loader }) => {
                   <br />
                   <h4>Freedom Loisa</h4>
                   <p>Digital Security Expert</p>
-                  <p>(+254) 725 131 828</p>
                 </div>
                 <div className="form-floating mb-3">
                   <input
@@ -98,7 +95,7 @@ const Home = ({ loader }) => {
                     className="form-control"
                     placeholder="name@example.com"
                   />
-                  <label htmlhtmlFor="name">Your name</label>
+                  <label htmlFor="name">Your name</label>
                 </div>
                 <div className="form-floating mb-3">
                   <input
@@ -107,7 +104,7 @@ const Home = ({ loader }) => {
                     className="form-control"
                     placeholder="name@example.com"
                   />
-                  <label htmlhtmlFor="email">Email address</label>
+                  <label htmlFor="email">Email address</label>
                 </div>
                 <div className="form-floating mb-3">
                   <input
@@ -116,7 +113,7 @@ const Home = ({ loader }) => {
                     className="form-control"
                     placeholder="name@example.com"
                   />
-                  <label htmlhtmlFor="phone">Phone number</label>
+                  <label htmlFor="phone">Phone number</label>
                 </div>
                 <button
                   type="submit"
@@ -124,18 +121,15 @@ const Home = ({ loader }) => {
                 >
                   Get a call back
                 </button>
-                {/* <hr />
-              <p className="text-muted fs-6 text-center">
-                By submitting my data I agree to be contacted
-              </p> */}
-              </form>
-            </div>
+              </div>
+              <br />
+            </form>
           </div>
           {/* intro */}
 
           {/* why work with us */}
           <div className="reason">
-            <h1>Why work with us?</h1>
+            <h1 className="text-center">Why work with us?</h1>
             <br />
             <div className="reason-container">
               <div className="reason-item">
@@ -147,18 +141,16 @@ const Home = ({ loader }) => {
                     <h3 className="card-title text-center">No Hidden Costs</h3>
                     <p className="card-text text-center">
                       We remain transparent and precise when the very first time
-                      our customers approach us. All you pay is a fixed monthly
-                      fee, there are no hidden charges for event reporting or
-                      anything.
+                      our customers approach us.
                     </p>
                   </div>
                 </div>
-                <div className="card">
+                <div className="card text-bg-secondary">
                   <div className="card-body">
                     <h6 className="card-subtitle text-center">
                       <i className="bi bi-clock fs-1"></i>
                     </h6>
-                    <h3 className="card-title text-center">Punctual</h3>
+                    <h3 className="card-title text-center">Always Punctual</h3>
                     <p className="card-text text-center">
                       Our turnaround time would be close to none and we will
                       alert you of any event right away.
@@ -182,7 +174,7 @@ const Home = ({ loader }) => {
                 </div>
               </div>
               <div className="reason-item">
-                <div className="card">
+                <div className="card text-bg-secondary">
                   <div className="card-body">
                     <h6 className="card-subtitle text-center">
                       <i className="bi bi-hand-thumbs-up fs-1"></i>
@@ -211,19 +203,18 @@ const Home = ({ loader }) => {
                     </p>
                   </div>
                 </div>
-                <div className="card">
+                <div className="card text-bg-secondary">
                   <div className="card-body">
                     <h6 className="card-subtitle text-center">
                       <i className="bi bi-graph-up-arrow fs-1"></i>
                     </h6>
                     <h3 className="card-title text-center">
-                      Continous Improvement
+                      Constant Improvement
                     </h3>
                     <p className="card-text text-center">
                       We continuously strive hard to keep our customers and
                       clients happy. Welcoming customer’s feedback and taking
-                      steps accordingly is what CCTV Monitoring Services
-                      spotlights and will continue to do so.
+                      steps accordingly.
                     </p>
                   </div>
                 </div>
@@ -240,13 +231,12 @@ const Home = ({ loader }) => {
             </h4>
             <br />
             <div className="testimonial-container">
-              <div className="card">
+              <div className="card text-bg-secondary">
                 <div className="card-body">
                   <p className="card-text text-center">
-                    "We continuously strive hard to keep our customers and
-                    clients happy. Welcoming customer’s feedback and taking
-                    steps accordingly is what CCTV Monitoring Services
-                    spotlights and will continue to do so."
+                    "CCTVmonitoring.com staff is well-trained and do their job
+                    with accuracy, Honest, reliable, and are dedicated to their
+                    roles and responsibility. Highly recommend them!"
                   </p>
                   <hr />
                   <h3 className="card-title text-center">Owner</h3>
@@ -255,12 +245,13 @@ const Home = ({ loader }) => {
                   </h6>
                 </div>
               </div>
-              <div className="card">
+              <div className="card text-bg-secondary">
                 <div className="card-body">
                   <p className="card-text text-center">
-                    "CCTVmonitoring.com staff is well-trained and do their job
-                    with accuracy, Honest, reliable, and are dedicated to their
-                    roles and responsibility. Highly recommend them!"
+                    "We continuously strive hard to keep our customers and
+                    clients happy. Welcoming customer’s feedback and taking
+                    steps accordingly is what CCTV Monitoring Services
+                    spotlights and will continue to do so."
                   </p>
                   <hr />
                   <h3 className="card-title text-center">Chief Executive</h3>
@@ -269,7 +260,7 @@ const Home = ({ loader }) => {
                   </h6>
                 </div>
               </div>
-              <div className="card">
+              <div className="card text-bg-secondary">
                 <div className="card-body">
                   <p className="card-text text-center">
                     "Once you sign up with the CCTVMonitoring.com team, their

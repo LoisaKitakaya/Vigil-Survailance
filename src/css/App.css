@@ -26,11 +26,75 @@
 .display-container-2 {
   display: flex;
   justify-content: first baseline;
-  width: 95%;
   margin: 0 auto;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.intro-caption {
+  width: 70%;
+  margin-right: 0.5rem;
+}
+
+.intro form {
+  width: 30%;
+  margin-left: 0.5rem;
+}
+
+.reason-item,
+.testimonial-container,
+.recent-post-container {
+  display: flex;
+}
+
+.reason-item .card,
+.testimonial-container .card {
+  width: 50% !important;
+  margin: 0.5rem !important;
+}
+
+.recent-post-container .card {
+  margin: 0.5rem !important;
+}
+
+.slug-link {
+  text-decoration: none !important;
 }
 
 /* media query for responsiveness */
 
 @media screen and (max-width: 600px) {
+  .intro-caption {
+    width: 100% !important;
+    margin: 1rem 0;
+  }
+
+  .intro form {
+    width: 100% !important;
+    margin: 0;
+  }
+
+  .reason-item,
+  .testimonial-container,
+  .recent-post-container,
+  .intro,
+  .testimonial-container .card {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .this-container {
+    margin: 0 1rem;
+  }
+
+  .reason-item .card,
+  .testimonial-container .card,
+  .recent-post-container .card {
+    width: 100% !important;
+    margin: 0.5rem 0 !important;
+  }
 }

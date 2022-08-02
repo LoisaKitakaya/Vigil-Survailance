@@ -76,30 +76,72 @@ const Navbar = () => {
       </div>
       {/* off menu */}
       <Offcanvas show={show} onHide={handleClose}>
-        <Offcanvas.Header closeButton>
+        <Offcanvas.Header closeButton className="bg-custom">
           <Offcanvas.Title>Menu</Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body>
-          <div className="off-menu fs-3">
-            <Link to={"/"} className="nav-link">
+        <Offcanvas.Body className="bg-custom">
+          <div className="off-menu fs-3 text-center">
+            <Link
+              to={"/"}
+              className="nav-link"
+              onClick={() => {
+                handleClose();
+              }}
+            >
               Home
             </Link>
-            <Link to={"/services"} className="nav-link">
+            <Link
+              to={"/services"}
+              className="nav-link"
+              onClick={() => {
+                handleClose();
+              }}
+            >
               Services
             </Link>
-            <Link to={"/quote"} className="nav-link">
+            <Link
+              to={"/quote"}
+              className="nav-link"
+              onClick={() => {
+                handleClose();
+              }}
+            >
               Get Quote
             </Link>
-            <a href="https://loremipsum.io/generator/" className="nav-link">
+            <a
+              href="https://loremipsum.io/generator/"
+              className="nav-link"
+              onClick={() => {
+                handleClose();
+              }}
+            >
               Vigil Shop
             </a>
-            <Link to={"/portfolio"} className="nav-link">
+            <Link
+              to={"/portfolio"}
+              className="nav-link"
+              onClick={() => {
+                handleClose();
+              }}
+            >
               Portfolio
             </Link>
-            <Link to={"blog"} className="nav-link">
+            <Link
+              to={"blog"}
+              className="nav-link"
+              onClick={() => {
+                handleClose();
+              }}
+            >
               Blog
             </Link>
-            <Link to={"/about"} className="nav-link">
+            <Link
+              to={"/about"}
+              className="nav-link"
+              onClick={() => {
+                handleClose();
+              }}
+            >
               About
             </Link>
           </div>
