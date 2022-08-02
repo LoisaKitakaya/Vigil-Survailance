@@ -18,7 +18,7 @@ const GET_PROJECT = gql`
   }
 `;
 
-const Project = ({loader}) => {
+const Project = ({ loader }) => {
   const slug = useParams();
 
   PageTitle(`Vigil | ${slug.slug}`);
@@ -67,15 +67,16 @@ const Project = ({loader}) => {
             />
             <br />
             <br />
-            <br />
             <h2 className="text-center">{data.project.name}</h2>
             <br />
             <div
-              className="content"
+              className="content fs-5"
               dangerouslySetInnerHTML={{
                 __html: data.project.description.html,
               }}
             />
+            {/* <br />
+            <p className="text-muted">Published on: {data.post.createdAt}</p> */}
           </div>
         </div>
       </div>

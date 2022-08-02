@@ -17,7 +17,7 @@ const GET_POJECTS = gql`
   }
 `;
 
-const Portfolio = ({loader}) => {
+const Portfolio = ({ loader }) => {
   PageTitle("Vigil | Portfolio");
 
   const { loading, error, data } = useQuery(GET_POJECTS);
@@ -52,48 +52,45 @@ const Portfolio = ({loader}) => {
   return (
     <div className="App-sub-container">
       <div className="this-container">
-        <div className="display-container">
-          <h1 className="text-center">Company Portfolio</h1>
-          <h4 className="text-center">Check out what we have been up to</h4>
-          <br />
-          <div className="projects-container">
-            {data.projects.map((project, index) => {
-              const list = (
-                <>
-                  <Link
-                    to={`/project/${project.slug}`}
-                    key={index}
-                    className="slug-link text-dark"
-                  >
-                    <div className="card card-card mb-3">
-                      <div className="row g-0">
-                        <div className="col-md-4">
-                          <img
-                            src={project.image.url}
-                            className="img-fluid rounded-start"
-                            alt="..."
-                          />
-                        </div>
-                        <div className="col-md-8">
-                          <div className="card-body">
-                            <h5 className="card-title">{project.name}</h5>
-                            <p className="card-text">{project.snippet}</p>
-                            <p className="card-text">
-                              <small className="text-muted">
-                                Vigil project
-                              </small>
-                            </p>
-                          </div>
+        <br />
+        <h1 className="text-center">Company Portfolio</h1>
+        <h4 className="text-center">Check out what we have been up to</h4>
+        <br />
+        <div className="projects-container">
+          {data.projects.map((project, index) => {
+            const list = (
+              <>
+                <Link
+                  to={`/project/${project.slug}`}
+                  key={index}
+                  className="slug-link text-dark"
+                >
+                  <div className="card card-card mb-3">
+                    <div className="row g-0">
+                      <div className="col-md-4">
+                        <img
+                          src={project.image.url}
+                          className="img-fluid rounded-start"
+                          alt="..."
+                        />
+                      </div>
+                      <div className="col-md-8">
+                        <div className="card-body">
+                          <h5 className="card-title">{project.name}</h5>
+                          <p className="card-text">{project.snippet}</p>
+                          <p className="card-text">
+                            <small className="text-muted">Vigil project</small>
+                          </p>
                         </div>
                       </div>
                     </div>
-                  </Link>
-                </>
-              );
+                  </div>
+                </Link>
+              </>
+            );
 
-              return list;
-            })}
-          </div>
+            return list;
+          })}
         </div>
       </div>
       <br />

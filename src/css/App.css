@@ -81,11 +81,11 @@ form .row .col-6 {
   margin: 0 0.5rem !important;
 }
 
-.col-4 {
+/* .col-4 {
   display: flex !important;
   align-items: center !important;
   flex-direction: column !important;
-}
+} */
 
 /* media query for responsiveness */
 

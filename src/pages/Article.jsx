@@ -19,7 +19,7 @@ const GET_ARTICLES = gql`
   }
 `;
 
-const Article = ({loader}) => {
+const Article = ({ loader }) => {
   const slug = useParams();
 
   PageTitle(`Vigil | ${slug.slug}`);
@@ -68,13 +68,14 @@ const Article = ({loader}) => {
             />
             <br />
             <br />
-            <br />
             <h2 className="text-center">{data.post.title}</h2>
             <br />
             <div
-              className="content"
+              className="content fs-5"
               dangerouslySetInnerHTML={{ __html: data.post.content.html }}
             />
+            <br />
+            <p className="text-muted">Published on: {data.post.date}</p>
           </div>
         </div>
       </div>

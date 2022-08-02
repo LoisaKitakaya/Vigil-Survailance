@@ -53,48 +53,47 @@ const Blog = ({loader}) => {
   return (
     <div className="App-sub-container">
       <div className="this-container">
-        <div className="display-container">
-          <h1 className="text-center">Company Articles {"&"} News</h1>
-          <h4 className="text-center">
-            Resources related to surveillance and security
-          </h4>
-          <br />
-          <div className="projects-container">
-            {data.posts.map((post, index) => {
-              const list = (
-                <>
-                  <Link
-                    to={`/article/${post.slug}`}
-                    key={index}
-                    className="slug-link text-dark"
-                  >
-                    <div className="card card-card mb-3">
-                      <div className="row g-0">
-                        <div className="col-md-4">
-                          <img
-                            src={post.coverImage.url}
-                            className="img-fluid rounded-start"
-                            alt="..."
-                          />
-                        </div>
-                        <div className="col-md-8">
-                          <div className="card-body">
-                            <h5 className="card-title">{post.title}</h5>
-                            <p className="card-text">{post.snippet}</p>
-                            <p className="card-text">
-                              <small className="text-muted">{post.date}</small>
-                            </p>
-                          </div>
+        <br />
+        <h1 className="text-center">Company Articles {"&"} News</h1>
+        <h4 className="text-center">
+          Resources related to surveillance and security
+        </h4>
+        <br />
+        <div className="projects-container">
+          {data.posts.map((post, index) => {
+            const list = (
+              <>
+                <Link
+                  to={`/article/${post.slug}`}
+                  key={index}
+                  className="slug-link text-dark"
+                >
+                  <div className="card card-card mb-3">
+                    <div className="row g-0">
+                      <div className="col-md-4">
+                        <img
+                          src={post.coverImage.url}
+                          className="img-fluid rounded-start"
+                          alt="..."
+                        />
+                      </div>
+                      <div className="col-md-8">
+                        <div className="card-body">
+                          <h5 className="card-title">{post.title}</h5>
+                          <p className="card-text">{post.snippet}</p>
+                          <p className="card-text">
+                            <small className="text-muted">{post.date}</small>
+                          </p>
                         </div>
                       </div>
                     </div>
-                  </Link>
-                </>
-              );
+                  </div>
+                </Link>
+              </>
+            );
 
-              return list;
-            })}
-          </div>
+            return list;
+          })}
         </div>
       </div>
       <br />
