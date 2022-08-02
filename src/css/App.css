@@ -1,329 +1,36 @@
-.App {
-  min-height: 100vh !important;
+.App-sub-container {
+  min-height: 95vh !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: #dfdbe5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%239C92AC' fill-opacity='0.22' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
-.footer-navbar {
-  display: flex !important;
-  flex-direction: column !important;
+.App-sub-container-2 {
+  min-height: 95vh !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: #fefefe;
 }
 
-.social-media {
+.display-container {
   display: flex;
   justify-content: first baseline;
-  width: fit-content;
+  flex-wrap: wrap;
 }
 
-.social-media a {
-  margin-right: 2rem !important;
+.this-container {
+  margin: 0 6rem;
 }
 
-.footer-container .navbar-nav {
-  display: flex !important;
-  flex-direction: column !important;
-}
-
-.menu-btn {
-  display: none !important;
-}
-
-.navbar-nav .btn {
-  padding: 0.25rem 0.55rem;
-}
-
-.off-menu {
-  text-align: center;
-}
-
-.off-menu .nav-link {
-  padding-bottom: 2rem;
-}
-
-.profesional img {
-  height: 200px;
-  width: 200px;
-}
-
-.intro-caption {
-  width: 55%;
-  line-height: 2rem;
-}
-
-.intro {
+.display-container-2 {
   display: flex;
-  justify-content: space-between;
-  padding: 2rem 0;
-}
-
-.intro-form {
-  width: 35%;
-}
-
-.intro-form form {
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-}
-
-.topbar {
-  padding: 1rem 0;
-}
-
-.top-light {
-  border-bottom: 1px solid gray;
-}
-
-.bot-light {
-  border-top: 1px solid gray;
-}
-
-.intro-links {
-  display: flex;
-  flex-direction: column;
-  align-items: baseline;
-}
-
-.intro-links a {
-  margin: 1rem 0;
-  width: 45%;
-}
-
-.reason-container {
-  display: flex;
-}
-
-.reason-item .card {
-  margin: 1rem;
-}
-
-.reason {
-  padding: 2rem 0;
-}
-
-.testimonial-container {
-  display: flex;
-}
-
-.testimonial-container .card {
-  margin: 1rem;
-  width: 50%;
-}
-
-.testimonials {
-  margin: 2rem auto;
-}
-
-.card {
-  background-color: whitesmoke !important;
-}
-
-.recent-posts {
-  margin: 2rem 0;
-}
-
-.recent-posts .recent-post-container {
-  margin: 1rem 0 !important;
-  display: flex;
-}
-
-.recent-post-container .card {
-  /* width: 40% !important; */
-  margin: 1rem;
-  transition-duration: 300ms !important;
-  transition-timing-function: ease-in-out !important;
-}
-
-.recent-post-container .card:hover {
-  transform: scale(1.025);
-}
-
-.navbar {
-  opacity: 0.9;
-}
-
-.services-container,
-.quote-container,
-.about-container,
-.blog-container,
-.portfolio-container,
-.article-container,
-.project-container {
-  margin: 2rem auto;
-}
-
-.quote-form form {
-  padding: 2rem !important;
-  width: fit-content;
-  margin: auto;
-  border-radius: 0.5rem;
-}
-
-.quote-form form .row {
-  width: fit-content;
-  margin: auto;
-}
-
-.check-boxes {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.about-sub {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0;
-}
-
-.about-cont {
-  margin: 0 1rem;
-}
-
-.about-cont img {
-  border-radius: 0.5rem;
-}
-
-.card-card {
-  width: fit-content;
-  margin: auto;
-}
-
-.slug-link {
-  text-decoration: none !important;
-}
-
-.slug-link .card:hover {
-  transform: scale(1.015) !important;
-}
-
-.slug-link .card {
-  transition-duration: 300ms !important;
-  transition-timing-function: ease-in-out !important;
-}
-
-.document {
-  width: 90%;
-  margin: auto;
-}
-
-.document .content {
-  background-color: white;
-  padding: 0 1rem;
-  font-size: large;
+  justify-content: first baseline;
+  width: 95%;
+  margin: 0 auto;
 }
 
 /* media query for responsiveness */
 
 @media screen and (max-width: 600px) {
-  .container {
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .footer-container .navbar-nav {
-    display: flex !important;
-    flex-direction: row !important;
-    margin: 1rem auto !important;
-    text-align: center !important;
-  }
-
-  .footer-container .navbar-nav .nav-link {
-    padding: 0 0.5rem !important;
-  }
-
-  .footer-brand {
-    text-align: center !important;
-  }
-
-  .to-be-hid {
-    display: none !important;
-  }
-
-  .menu-btn {
-    display: initial !important;
-  }
-
-  .just-links {
-    display: none !important;
-  }
-
-  .intro {
-    flex-direction: column;
-    justify-content: space-around;
-  }
-
-  .intro-caption {
-    width: auto;
-    text-align: center;
-  }
-
-  .intro-form {
-    width: auto;
-    margin-top: 2rem;
-  }
-
-  .social-media {
-    justify-content: space-evenly;
-    margin: auto;
-  }
-
-  .reason-container {
-    flex-wrap: wrap;
-  }
-
-  .reason-item .card {
-    margin: 1rem auto;
-  }
-
-  .testimonial-container {
-    flex-wrap: wrap;
-  }
-
-  .testimonial-container .card {
-    margin: 1rem auto;
-    width: auto;
-  }
-
-  .recent-posts .recent-post-container {
-    flex-wrap: wrap;
-  }
-
-  .recent-post-container .card {
-    width: 100% !important;
-    margin: 1rem auto;
-  }
-
-  .check-boxes {
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .quote-form form {
-    padding: auto !important;
-  }
-
-  .quote-form form .row {
-    width: 100% !important;
-    flex-direction: column;
-  }
-
-  .quote-form form .row .col-6 {
-    width: 100% !important;
-  }
-
-  .about-sub {
-    flex-wrap: wrap;
-  }
-
-  .about-cont {
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .about-cont img {
-    width: 95%;
-  }
-
-  .document {
-    width: auto;
-  }
 }

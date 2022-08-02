@@ -1,0 +1,84 @@
+.top-nav-arrangement {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+.top-links,
+.bot-links {
+  margin-right: 1rem !important;
+}
+
+.m-right {
+  margin-right: 0.25rem !important;
+}
+
+.top-nav-arrangement form {
+  width: 500px;
+}
+
+.contact-links,
+.contact-link {
+  display: flex !important;
+  align-items: center !important;
+  height: fit-content !important;
+}
+
+.text-purple {
+  color: #c176af !important;
+}
+
+.footer {
+  margin: auto !important;
+  padding: 2rem 0;
+}
+
+.intro-banner {
+  background-image: url("../assets/banner9.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  min-height: 95vh;
+}
+
+.banner-title {
+  font-size: 60px !important;
+}
+
+.banner-title {
+  width: 50% !important;
+}
+
+.banner-container {
+  padding: 8rem 0 0 0 !important;
+}
+
+.banner-container .btn {
+  margin-right: 2rem;
+}
+
+.load-and-error {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.load-and-error img,
+.load-and-error h1 {
+  width: fit-content;
+  margin: auto;
+}
+
+.top-margin {
+  margin-top: 1.25rem !important;
+}
+
+.top-margin .active {
+  background-color: #343a40 !important;
+  color: #f8f9fa !important;
+}
+
+.spinner-border {
+  width: 4rem !important;
+  height: 4rem !important;
+}

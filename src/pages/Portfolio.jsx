@@ -1,11 +1,7 @@
 import { useQuery, gql } from "@apollo/client";
+import { Link } from "react-router-dom";
 
 import PageTitle from "../components/PageTitle";
-import Footer from "../layout/Footer";
-import Navbar from "../layout/Navbar";
-
-import spinner from "../assets/Settings.gif";
-import { Link } from "react-router-dom";
 
 const GET_POJECTS = gql`
   query GET_PROJECTS {
@@ -21,7 +17,7 @@ const GET_POJECTS = gql`
   }
 `;
 
-const Portfolio = () => {
+const Portfolio = ({loader}) => {
   PageTitle("Vigil | Portfolio");
 
   const { loading, error, data } = useQuery(GET_POJECTS);
@@ -29,41 +25,34 @@ const Portfolio = () => {
 
   if (loading)
     return (
-      <div className="App">
-        <div className="animation-container">
-          <div className="loader">
-            <img src={spinner} alt="..." />
-          </div>
-          <div className="loader-text">
-            <h2>Loading...</h2>
-          </div>
+      <div className="App-sub-container-2">
+        <div className="load-and-error">
+          <img src={loader} alt="loader" />
         </div>
+        <br />
+        <br />
       </div>
     );
 
   if (error)
     return (
-      <div className="App">
-        <div className="animation-container">
-          <div className="loader">
-            <h1>Error!</h1>
-          </div>
-          <div className="loader-text">
-            <h2>Something went wrong!</h2>
+      <div className="App-sub-container-2">
+        <div className="load-and-error">
+          <div className="alert alert-danger text-center" role="alert">
+            <h1>Ooops! Something went wrong!</h1>
+            <hr />
+            <h4>Error: {error.message}</h4>
           </div>
         </div>
+        <br />
+        <br />
       </div>
     );
 
   return (
-    <div className="portfolio">
-      {/* navigation */}
-      <Navbar />
-      {/* navigation */}
-
-      {/* body */}
-      <div className="container-fluid">
-        <div className="portfolio-container">
+    <div className="App-sub-container">
+      <div className="this-container">
+        <div className="display-container">
           <h1 className="text-center">Company Portfolio</h1>
           <h4 className="text-center">Check out what we have been up to</h4>
           <br />
@@ -76,21 +65,23 @@ const Portfolio = () => {
                     key={index}
                     className="slug-link text-dark"
                   >
-                    <div class="card card-card mb-3">
-                      <div class="row g-0">
-                        <div class="col-md-4">
+                    <div className="card card-card mb-3">
+                      <div className="row g-0">
+                        <div className="col-md-4">
                           <img
                             src={project.image.url}
-                            class="img-fluid rounded-start"
+                            className="img-fluid rounded-start"
                             alt="..."
                           />
                         </div>
-                        <div class="col-md-8">
-                          <div class="card-body">
-                            <h5 class="card-title">{project.name}</h5>
-                            <p class="card-text">{project.snippet}</p>
-                            <p class="card-text">
-                              <small class="text-muted">Vigil project</small>
+                        <div className="col-md-8">
+                          <div className="card-body">
+                            <h5 className="card-title">{project.name}</h5>
+                            <p className="card-text">{project.snippet}</p>
+                            <p className="card-text">
+                              <small className="text-muted">
+                                Vigil project
+                              </small>
                             </p>
                           </div>
                         </div>
@@ -105,11 +96,8 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
-      {/* body */}
-
-      {/* footer */}
-      <Footer />
-      {/* footer */}
+      <br />
+      <br />
     </div>
   );
 };

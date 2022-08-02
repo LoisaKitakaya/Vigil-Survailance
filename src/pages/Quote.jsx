@@ -1,20 +1,12 @@
 import PageTitle from "../components/PageTitle";
-import Footer from "../layout/Footer";
-import Navbar from "../layout/Navbar";
 
 const Quote = () => {
   PageTitle("Vigil | Quote");
 
   return (
-    <div className="quote">
-      {/* navigation */}
-      <Navbar />
-      {/* navigation */}
-
-      {/* body */}
-      <div className="container-fluid">
-        {/* quote */}
-        <div className="quote-container">
+    <div className="App-sub-container">
+      <div className="this-container">
+        <div className="display-container">
           <h1 className="text-center">Quote</h1>
           <h4 className="text-center">
             Fill the form and get a free quote on whatever you are interested in
@@ -154,13 +146,9 @@ const Quote = () => {
             </form>
           </div>
         </div>
-        {/* quote */}
       </div>
-      {/* body */}
-
-      {/* footer */}
-      <Footer />
-      {/* footer */}
+      <br />
+      <br />
     </div>
   );
 };

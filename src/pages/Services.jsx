@@ -2,21 +2,13 @@ import { Accordion } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 import PageTitle from "../components/PageTitle";
-import Footer from "../layout/Footer";
-import Navbar from "../layout/Navbar";
 
 const Services = () => {
   PageTitle("Vigil | Services");
   return (
-    <div className="services">
-      {/* navigation */}
-      <Navbar />
-      {/* navigation */}
-
-      {/* body */}
-      <div className="container-fluid">
-        {/* services */}
-        <div className="services-container">
+    <div className="App-sub-container">
+      <div className="this-container">
+        <div className="display-container">
           <h1 className="text-center">Services</h1>
           <h4 className="text-center">Check out all the services we offer</h4>
           <br />
@@ -296,15 +288,10 @@ const Services = () => {
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>
-          <br />
         </div>
-        {/* services */}
       </div>
-      {/* body */}
-
-      {/* footer */}
-      <Footer />
-      {/* footer */}
+      <br />
+      <br />
     </div>
   );
 };

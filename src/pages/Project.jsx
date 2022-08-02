@@ -2,10 +2,6 @@ import { useQuery, gql } from "@apollo/client";
 import { useParams } from "react-router-dom";
 
 import PageTitle from "../components/PageTitle";
-import Footer from "../layout/Footer";
-import Navbar from "../layout/Navbar";
-
-import spinner from "../assets/Settings.gif";
 
 const GET_PROJECT = gql`
   query GET_PROJECT($slug: String!) {
@@ -22,7 +18,7 @@ const GET_PROJECT = gql`
   }
 `;
 
-const Project = () => {
+const Project = ({loader}) => {
   const slug = useParams();
 
   PageTitle(`Vigil | ${slug.slug}`);
@@ -34,46 +30,39 @@ const Project = () => {
 
   if (loading)
     return (
-      <div className="App">
-        <div className="animation-container">
-          <div className="loader">
-            <img src={spinner} alt="..." />
-          </div>
-          <div className="loader-text">
-            <h2>Loading...</h2>
-          </div>
+      <div className="App-sub-container-2">
+        <div className="load-and-error">
+          <img src={loader} alt="loader" />
         </div>
+        <br />
+        <br />
       </div>
     );
 
   if (error)
     return (
-      <div className="App">
-        <div className="animation-container">
-          <div className="loader">
-            <h1>Error!</h1>
-          </div>
-          <div className="loader-text">
-            <h2>Something went wrong!</h2>
+      <div className="App-sub-container-2">
+        <div className="load-and-error">
+          <div className="alert alert-danger text-center" role="alert">
+            <h1>Ooops! Something went wrong!</h1>
+            <hr />
+            <h4>Error: {error.message}</h4>
           </div>
         </div>
+        <br />
+        <br />
       </div>
     );
 
   return (
-    <div className="project">
-      {/* navigation */}
-      <Navbar />
-      {/* navigation */}
-
-      {/* body */}
-      <div className="container-fluid">
-        <div className="project-container">
+    <div className="App-sub-container">
+      <div className="this-container">
+        <div className="display-container">
           <div className="document">
             <br />
             <img
               src={data.project.image.url}
-              class="img-fluid rounded"
+              className="img-fluid rounded"
               alt="..."
             />
             <br />
@@ -90,11 +79,8 @@ const Project = () => {
           </div>
         </div>
       </div>
-      {/* body */}
-
-      {/* footer */}
-      <Footer />
-      {/* footer */}
+      <br />
+      <br />
     </div>
   );
 };

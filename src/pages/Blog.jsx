@@ -2,10 +2,6 @@ import { useQuery, gql } from "@apollo/client";
 import { Link } from "react-router-dom";
 
 import PageTitle from "../components/PageTitle";
-import Footer from "../layout/Footer";
-import Navbar from "../layout/Navbar";
-
-import spinner from "../assets/Settings.gif";
 
 const GET_ARTICLES = gql`
   query GET_ARTICLES {
@@ -22,7 +18,7 @@ const GET_ARTICLES = gql`
   }
 `;
 
-const Blog = () => {
+const Blog = ({loader}) => {
   PageTitle("Vigil | Blog");
 
   const { loading, error, data } = useQuery(GET_ARTICLES);
@@ -30,41 +26,34 @@ const Blog = () => {
 
   if (loading)
     return (
-      <div className="App">
-        <div className="animation-container">
-          <div className="loader">
-            <img src={spinner} alt="..." />
-          </div>
-          <div className="loader-text">
-            <h2>Loading...</h2>
-          </div>
+      <div className="App-sub-container-2">
+        <div className="load-and-error">
+          <img src={loader} alt="loader" />
         </div>
+        <br />
+        <br />
       </div>
     );
 
   if (error)
     return (
-      <div className="App">
-        <div className="animation-container">
-          <div className="loader">
-            <h1>Error!</h1>
-          </div>
-          <div className="loader-text">
-            <h2>Something went wrong!</h2>
+      <div className="App-sub-container-2">
+        <div className="load-and-error">
+          <div className="alert alert-danger text-center" role="alert">
+            <h1>Ooops! Something went wrong!</h1>
+            <hr />
+            <h4>Error: {error.message}</h4>
           </div>
         </div>
+        <br />
+        <br />
       </div>
     );
 
   return (
-    <div className="blog">
-      {/* navigation */}
-      <Navbar />
-      {/* navigation */}
-
-      {/* body */}
-      <div className="container-fluid">
-        <div className="blog-container">
+    <div className="App-sub-container">
+      <div className="this-container">
+        <div className="display-container">
           <h1 className="text-center">Company Articles {"&"} News</h1>
           <h4 className="text-center">
             Resources related to surveillance and security
@@ -79,21 +68,21 @@ const Blog = () => {
                     key={index}
                     className="slug-link text-dark"
                   >
-                    <div class="card card-card mb-3">
-                      <div class="row g-0">
-                        <div class="col-md-4">
+                    <div className="card card-card mb-3">
+                      <div className="row g-0">
+                        <div className="col-md-4">
                           <img
                             src={post.coverImage.url}
-                            class="img-fluid rounded-start"
+                            className="img-fluid rounded-start"
                             alt="..."
                           />
                         </div>
-                        <div class="col-md-8">
-                          <div class="card-body">
-                            <h5 class="card-title">{post.title}</h5>
-                            <p class="card-text">{post.snippet}</p>
-                            <p class="card-text">
-                              <small class="text-muted">{post.date}</small>
+                        <div className="col-md-8">
+                          <div className="card-body">
+                            <h5 className="card-title">{post.title}</h5>
+                            <p className="card-text">{post.snippet}</p>
+                            <p className="card-text">
+                              <small className="text-muted">{post.date}</small>
                             </p>
                           </div>
                         </div>
@@ -108,11 +97,8 @@ const Blog = () => {
           </div>
         </div>
       </div>
-      {/* body */}
-
-      {/* footer */}
-      <Footer />
-      {/* footer */}
+      <br />
+      <br />
     </div>
   );
 };

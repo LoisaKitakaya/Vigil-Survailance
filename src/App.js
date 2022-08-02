@@ -4,6 +4,11 @@ import { Routes, Route } from "react-router-dom";
 
 import "./css/App.css";
 
+import loader from "./assets/loader1.gif";
+
+import Footer from "./layout/Footer";
+import Navbar from "./layout/Navbar";
+
 import About from "./pages/About";
 import Article from "./pages/Article";
 import Blog from "./pages/Blog";
@@ -21,19 +26,27 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <div className="App container">
+      <div className="App">
+        {/* navigation */}
+        <Navbar />
+        {/* navigation */}
+
         {/* app routes */}
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home loader={loader} />} />
           <Route path="/services" element={<Services />} />
           <Route path="/quote" element={<Quote />} />
           <Route path="/about" element={<About />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/article/:slug" element={<Article />} />
-          <Route path="/project/:slug" element={<Project />} />
+          <Route path="/blog" element={<Blog loader={loader} />} />
+          <Route path="/portfolio" element={<Portfolio loader={loader} />} />
+          <Route path="/article/:slug" element={<Article loader={loader} />} />
+          <Route path="/project/:slug" element={<Project loader={loader} />} />
         </Routes>
         {/* app routes */}
+
+        {/* footer */}
+        <Footer />
+        {/* footer */}
       </div>
     </ApolloProvider>
   );

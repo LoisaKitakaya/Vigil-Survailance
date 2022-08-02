@@ -1,6 +1,4 @@
 import PageTitle from "../components/PageTitle";
-import Footer from "../layout/Footer";
-import Navbar from "../layout/Navbar";
 
 import aboutImage from "../assets/intro-image.jpg";
 
@@ -8,14 +6,10 @@ const About = () => {
   PageTitle("Vigil | About");
 
   return (
-    <div className="about">
-      {/* navigation */}
-      <Navbar />
-      {/* navigation */}
-
-      {/* body */}
-      <div className="container-fluid">
-        <div className="about-container">
+    // border
+    <div className="App-sub-container">
+      <div className="this-container">
+        <div className="display-container">
           <h1 className="text-center">About</h1>
           <h4 className="text-center">Get to know us better</h4>
           <br />
@@ -75,12 +69,10 @@ const About = () => {
           </div>
         </div>
       </div>
-      {/* body */}
-
-      {/* footer */}
-      <Footer />
-      {/* footer */}
+      <br />
+      <br />
     </div>
+    // border
   );
 };
 
