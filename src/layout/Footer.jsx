@@ -36,7 +36,7 @@ const Footer = () => {
             </a>
             <a
               href="https://twitter.com/FreedomLoisa"
-              className="contact-icons top-links"
+              className="contact-icons"
             >
               <i className="bi bi-linkedin fs-6 text-light"></i>
             </a>
@@ -46,7 +46,7 @@ const Footer = () => {
       {/* separator */}
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container row text-light footer">
-          <div className="col-auto">
+          <div className="col-4">
             <strong>
               <p>Store</p>
             </strong>
@@ -66,7 +66,7 @@ const Footer = () => {
               Company site
             </a>
           </div>
-          <div className="col-auto">
+          <div className="col-4">
             <strong>
               <p>Support</p>
             </strong>
@@ -83,7 +83,7 @@ const Footer = () => {
               Returns {"&"} refunds
             </Link>
           </div>
-          <div className="col-auto">
+          <div className="col-4">
             <strong>
               <p>Information</p>
             </strong>
@@ -99,27 +99,6 @@ const Footer = () => {
             <Link to={"/bulkpurchase"} className="nav-link">
               Corporate {"&"} bulk purchase
             </Link>
-          </div>
-          <div className="col-4">
-            <strong>
-              <p>Newsletter</p>
-            </strong>
-            <p>Subscribe to get updates about our products and offers</p>
-            <form className="d-flex" role="search">
-              <div className="input-group">
-                <input
-                  className="form-control"
-                  name="newsletter"
-                  type="email"
-                  placeholder="your email"
-                  aria-label="Subscribe"
-                  required
-                />
-                <button className="btn btn-warning" type="submit">
-                  Subscribe
-                </button>
-              </div>
-            </form>
           </div>
         </div>
       </nav>

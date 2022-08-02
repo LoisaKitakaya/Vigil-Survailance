@@ -81,6 +81,12 @@ form .row .col-6 {
   margin: 0 0.5rem !important;
 }
 
+.col-4 {
+  display: flex !important;
+  align-items: center !important;
+  flex-direction: column !important;
+}
+
 /* media query for responsiveness */
 
 @media screen and (max-width: 600px) {
@@ -124,12 +130,12 @@ form .row .col-6 {
   }
 
   .about-cont {
-  width: 100% !important;
-}
+    width: 100% !important;
+  }
 
-.about-cont,
-.about-sub img,
-.about-sub-reverse img {
-  margin: 0 !important;
-}
+  .about-cont,
+  .about-sub img,
+  .about-sub-reverse img {
+    margin: 0 !important;
+  }
 }
