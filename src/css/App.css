@@ -13,12 +13,6 @@
   background-color: #fefefe;
 }
 
-.display-container {
-  display: flex;
-  justify-content: first baseline;
-  flex-wrap: wrap;
-}
-
 .this-container {
   margin: 0 6rem;
 }
