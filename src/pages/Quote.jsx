@@ -6,74 +6,106 @@ const Quote = () => {
   return (
     <div className="App-sub-container">
       <div className="this-container">
-        <div className="display-container">
-          <h1 className="text-center">Quote</h1>
-          <h4 className="text-center">
-            Fill the form and get a free quote on whatever you are interested in
-          </h4>
-          <br />
-          <div className="quote-form">
-            <form action="#" className="bg-dark text-light">
+        <br />
+        <h1 className="text-center">Quote</h1>
+        <h4 className="text-center">
+          Fill the form and get a free quote on services you are interested in
+        </h4>
+        <br />
+        <div className="quote-form">
+          <form action="#" className="bg-dark card text-light">
+            <div className="card-body text-dark">
+              <div className="form-floating mb-3">
+                <input
+                  type="text"
+                  className="form-control"
+                  name="firstname"
+                  placeholder="First Name"
+                />
+                <label htmlFor="firstname">First name</label>
+              </div>
+              <div className="form-floating mb-3">
+                <input
+                  type="text"
+                  className="form-control"
+                  name="secondname"
+                  placeholder="Second Name"
+                />
+                <label htmlFor="secondname">Second name</label>
+              </div>
+              <div className="form-floating mb-3">
+                <input
+                  type="text"
+                  className="form-control"
+                  name="company"
+                  placeholder="Company Name"
+                />
+                <label htmlFor="company">Company name</label>
+              </div>
+              <div className="form-floating mb-3">
+                <input
+                  type="email"
+                  className="form-control"
+                  name="email"
+                  placeholder="Email address"
+                />
+                <label htmlFor="email">Email address</label>
+              </div>
+              <div className="form-floating mb-3">
+                <input
+                  type="text"
+                  className="form-control"
+                  name="city"
+                  placeholder="City Name"
+                />
+                <label htmlFor="city">City/town</label>
+              </div>
+              <div className="form-floating mb-3">
+                <input
+                  type="text"
+                  className="form-control"
+                  name="phone"
+                  placeholder="Phone Number"
+                />
+                <label htmlFor="phone">Phone</label>
+              </div>
               <div className="row text-dark">
-                <div className="col-6">
-                  <div className="form-floating mb-3">
+                <div className="col-6 text-light float-start">
+                  <div className="form-check">
                     <input
-                      type="text"
-                      className="form-control"
-                      name="firstname"
-                      placeholder="First Name"
+                      className="form-check-input"
+                      type="checkbox"
+                      value=""
+                      name="automotive"
                     />
-                    <label htmlFor="firstname">First name</label>
+                    <label className="form-check-label" htmlFor="automotive">
+                      Alarm system installation
+                    </label>
                   </div>
-                  <div className="form-floating mb-3">
+                  <div className="form-check">
                     <input
-                      type="text"
-                      className="form-control"
-                      name="secondname"
-                      placeholder="Second Name"
+                      className="form-check-input"
+                      type="checkbox"
+                      value=""
+                      name="equipment"
                     />
-                    <label htmlFor="secondname">Second name</label>
+                    <label className="form-check-label" htmlFor="equipment">
+                      Video feed monitoring
+                    </label>
                   </div>
-                  <div className="form-floating mb-3">
+                  <div className="form-check">
                     <input
-                      type="text"
-                      className="form-control"
-                      name="company"
-                      placeholder="Company Name"
+                      className="form-check-input"
+                      type="checkbox"
+                      value=""
+                      name="equipment"
                     />
-                    <label htmlFor="company">Company name</label>
-                  </div>
-                </div>
-                <div className="col-6">
-                  <div className="form-floating mb-3">
-                    <input
-                      type="email"
-                      className="form-control"
-                      name="email"
-                      placeholder="Email address"
-                    />
-                    <label htmlFor="email">Email address</label>
-                  </div>
-                  <div className="form-floating mb-3">
-                    <input
-                      type="text"
-                      className="form-control"
-                      name="city"
-                      placeholder="City Name"
-                    />
-                    <label htmlFor="city">City/town</label>
-                  </div>
-                  <div className="form-floating mb-3">
-                    <input
-                      type="text"
-                      className="form-control"
-                      name="phone"
-                      placeholder="Phone Number"
-                    />
-                    <label htmlFor="phone">Phone</label>
+                    <label className="form-check-label" htmlFor="equipment">
+                      Surveillance consultancy
+                    </label>
                   </div>
                 </div>
-                <div className="check-boxes text-light">
+                <div className="col-6 text-light float-end">
                   <div className="form-check">
                     <input
                       className="form-check-input"
@@ -82,7 +114,7 @@ const Quote = () => {
                       name="alarmsystem"
                     />
                     <label className="form-check-label" htmlFor="alarmsystem">
-                      Alarm system
+                      Automotive tracking
                     </label>
                   </div>
                   <div className="form-check">
@@ -96,7 +128,7 @@ const Quote = () => {
                       className="form-check-label"
                       htmlFor="videomonitoring"
                     >
-                      Video monitoring
+                      Equipment purchase
                     </label>
                   </div>
                   <div className="form-check">
@@ -107,44 +139,20 @@ const Quote = () => {
                       name="electronic"
                     />
                     <label className="form-check-label" htmlFor="electronic">
-                      Electronic security
-                    </label>
-                  </div>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      value=""
-                      name="automotive"
-                    />
-                    <label className="form-check-label" htmlFor="automotive">
-                      Automotive tracking
-                    </label>
-                  </div>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      value=""
-                      name="equipment"
-                    />
-                    <label className="form-check-label" htmlFor="equipment">
-                      Surveillance equipment
+                      Equipment installation
                     </label>
                   </div>
                 </div>
               </div>
               <br />
-              <div className="container-fluid">
-                <button
-                  type="submit"
-                  className="btn btn-warning container-fluid"
-                >
-                  Submit
-                </button>
-              </div>
-            </form>
-          </div>
+              <button
+                type="submit"
+                className="btn btn-warning container-fluid mb-3"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
         </div>
       </div>
       <br />

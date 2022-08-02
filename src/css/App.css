@@ -59,6 +59,11 @@
   text-decoration: none !important;
 }
 
+form .row .col-6 {
+  width: fit-content !important;
+  margin: auto !important;
+}
+
 /* media query for responsiveness */
 
 @media screen and (max-width: 600px) {
@@ -90,5 +95,10 @@
   .recent-post-container .card {
     width: 100% !important;
     margin: 0.5rem 0 !important;
+  }
+
+  form .row .col-6 {
+    /* width: 100% !important; */
+    text-align: center !important;
   }
 }
