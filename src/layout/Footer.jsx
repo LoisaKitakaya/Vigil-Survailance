@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+
 import "../css/layout.css";
 
 const Footer = () => {
@@ -46,58 +47,34 @@ const Footer = () => {
       {/* separator */}
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container row text-light footer">
-          <div className="col-4">
-            <strong>
-              <p>Store</p>
-            </strong>
+          <div className="col-auto text-center">
             <Link to={"/about"} className="nav-link">
               About us
             </Link>
-            <Link to={"/findstore"} className="nav-link">
-              Find store
-            </Link>
-            <Link to={"/howtoshop"} className="nav-link">
-              How to shop
-            </Link>
-            <a
-              href="https://vigilsurveillance.netlify.app/"
-              className="nav-link"
-            >
-              Company site
-            </a>
           </div>
-          <div className="col-4">
-            <strong>
-              <p>Support</p>
-            </strong>
-            <Link to={"/payment"} className="nav-link">
-              Payment
-            </Link>
-            <Link to={"/help"} className="nav-link">
-              Help center
-            </Link>
-            <Link to={"/reportproduct"} className="nav-link">
-              Report a product
-            </Link>
-            <Link to={"/returns&refunds"} className="nav-link">
-              Returns {"&"} refunds
+          <div className="col-auto text-center">
+            <Link to={"/services"} className="nav-link">
+              Services
             </Link>
           </div>
-          <div className="col-4">
-            <strong>
-              <p>Information</p>
-            </strong>
-            <Link to={"/shippinginfo"} className="nav-link">
-              Shipping info
+          <div className="col-auto text-center">
+            <Link to={"/blog"} className="nav-link">
+              Blog
             </Link>
-            <Link to={"/privacypolicy"} className="nav-link">
-              Privacy policy
+          </div>
+          <div className="col-auto text-center">
+            <Link to={"/projects"} className="nav-link">
+              Projects
             </Link>
-            <Link to={"/T&C"} className="nav-link">
+          </div>
+          <div className="col-auto text-center">
+            <Link to={"/terms_and_conditions"} className="nav-link">
               Terms {"&"} conditions
             </Link>
-            <Link to={"/bulkpurchase"} className="nav-link">
-              Corporate {"&"} bulk purchase
+          </div>
+          <div className="col-auto text-center">
+            <Link to={"/privacy_policy"} className="nav-link">
+              Privacy policy
             </Link>
           </div>
         </div>
@@ -125,7 +102,7 @@ const Footer = () => {
               Developed by{" "}
               <a
                 href="https://freedomloisa.netlify.app/"
-                className="text-light top-links"
+                className="text-light"
               >
                 Freedom Loisa
               </a>

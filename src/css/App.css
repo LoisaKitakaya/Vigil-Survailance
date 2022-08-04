@@ -103,6 +103,10 @@ form .row .col-6 {
   justify-content: center !important;
 }
 
+.footer {
+  display: flex !important;
+}
+
 /* media query for responsiveness */
 
 @media screen and (max-width: 600px) {
@@ -157,5 +161,16 @@ form .row .col-6 {
 
   .document img {
     height: auto !important;
+  }
+
+  .footer {
+    flex-wrap: wrap !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    margin: auto !important;
+  }
+
+  .footer div {
+    margin: 1rem !important;
   }
 }
