@@ -15,7 +15,6 @@ import Blog from "./pages/Blog";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import Project from "./pages/Project";
-import Quote from "./pages/Quote";
 import Services from "./pages/Services";
 
 const client = new ApolloClient({
@@ -35,7 +34,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home loader={loader} />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/quote" element={<Quote />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog loader={loader} />} />
           <Route path="/portfolio" element={<Portfolio loader={loader} />} />

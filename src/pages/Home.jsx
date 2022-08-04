@@ -1,5 +1,11 @@
 import { useQuery, gql } from "@apollo/client";
 import { Link } from "react-router-dom";
+import { useRef, useState } from "react";
+
+import Toast from "react-bootstrap/Toast";
+import ToastContainer from "react-bootstrap/ToastContainer";
+
+import emailjs from "@emailjs/browser";
 
 import PageTitle from "../components/PageTitle";
 import IntroBanner from "../layout/IntroBanner";
@@ -23,10 +29,36 @@ const GET_RECENT = gql`
 `;
 
 const Home = ({ loader }) => {
+  const [showSuccess, setShowSuccess] = useState(false);
+
   PageTitle("Vigil | Home");
 
   const { loading, error, data } = useQuery(GET_RECENT);
   console.log(data);
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_lt6up3s",
+        "call_back_form",
+        form.current,
+        "TDPuuTiYPX93_hmQN"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
+    setShowSuccess(true);
+  };
 
   if (loading)
     return (
@@ -75,7 +107,7 @@ const Home = ({ loader }) => {
             </div>
           </div>
           {/* ///s */}
-          <form action="#" className="card bg-dark">
+          <form className="card bg-dark" ref={form} onSubmit={sendEmail}>
             <div className="card-body">
               <div className="profesional text-center text-light">
                 <img
@@ -110,7 +142,7 @@ const Home = ({ loader }) => {
                   type="text"
                   name="phone"
                   className="form-control"
-                  placeholder="name@example.com"
+                  placeholder="e.g. +254725131828"
                 />
                 <label htmlFor="phone">Phone number</label>
               </div>
@@ -312,6 +344,20 @@ const Home = ({ loader }) => {
       </div>
       <br />
       <br />
+      <ToastContainer className="toast-alert" position="bottom-end">
+        <Toast
+          onClose={() => setShowSuccess(false)}
+          show={showSuccess}
+          delay={3000}
+          autohide
+          bg="success"
+          className="text-light"
+        >
+          <Toast.Body>
+            <i class="bi bi-patch-check-fill"></i> Form submitted successfully!
+          </Toast.Body>
+        </Toast>
+      </ToastContainer>
     </div>
     // border
   );

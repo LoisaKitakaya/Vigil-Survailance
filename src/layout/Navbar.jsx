@@ -33,26 +33,6 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <NavLink
-                to={"/quote"}
-                className={({ isActive }) =>
-                  isActive ? "active nav-link" : "nav-link"
-                }
-              >
-                Quote
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                to={"/about"}
-                className={({ isActive }) =>
-                  isActive ? "active nav-link" : "nav-link"
-                }
-              >
-                About
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
                 to={"/blog"}
                 className={({ isActive }) =>
                   isActive ? "active nav-link" : "nav-link"
@@ -69,6 +49,21 @@ const Navbar = () => {
                 }
               >
                 Portfolio
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <a href="https://app.hygraph.com/" className="nav-link">
+                Vigil shop
+              </a>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                to={"/about"}
+                className={({ isActive }) =>
+                  isActive ? "active nav-link" : "nav-link"
+                }
+              >
+                About
               </NavLink>
             </li>
           </ul>
