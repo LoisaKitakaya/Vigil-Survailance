@@ -53,10 +53,25 @@
 
 .recent-post-container .card {
   margin: 0.5rem !important;
+  transition-duration: 200ms;
+  transition-timing-function: linear;
+}
+
+.recent-post-container .card:hover {
+  box-shadow: 2px 2px 10px -5px #000000;
 }
 
 .slug-link {
   text-decoration: none !important;
+}
+
+.slug-link .card {
+  transition-duration: 200ms;
+  transition-timing-function: linear;
+}
+
+.slug-link .card:hover {
+  box-shadow: 2px 2px 10px -5px #000000;
 }
 
 form .row .col-6 {
