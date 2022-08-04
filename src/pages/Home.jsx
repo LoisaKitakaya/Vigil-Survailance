@@ -317,7 +317,7 @@ const Home = ({ loader }) => {
               const list = (
                 <>
                   <Link
-                    to={`/article/${article.slug}`}
+                    to={`/blog/${article.slug}`}
                     key={index}
                     className="slug-link text-dark"
                   >
