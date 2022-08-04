@@ -64,7 +64,7 @@ const Blog = ({loader}) => {
             const list = (
               <>
                 <Link
-                  to={`/article/${post.slug}`}
+                  to={`/blog/${post.slug}`}
                   key={index}
                   className="slug-link text-dark"
                 >

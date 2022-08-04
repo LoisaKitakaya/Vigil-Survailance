@@ -104,7 +104,7 @@ const QuoteForm = ({ service }) => {
           <br />
           <button
             type="submit"
-            className="btn btn-warning container-fluid mb-3"
+            className="btn btn-secondary container-fluid mb-3"
           >
             Submit
           </button>

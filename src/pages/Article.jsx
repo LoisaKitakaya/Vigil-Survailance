@@ -68,7 +68,7 @@ const Article = ({ loader }) => {
             />
             <br />
             <br />
-            <h2 className="text-center">{data.post.title}</h2>
+            <h2>{data.post.title}</h2>
             <br />
             <div
               className="content fs-5"

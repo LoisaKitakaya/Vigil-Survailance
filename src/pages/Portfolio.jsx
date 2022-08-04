@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import PageTitle from "../components/PageTitle";
 
-const GET_POJECTS = gql`
+const GET_PROJECTS = gql`
   query GET_PROJECTS {
     projects {
       id
@@ -20,7 +20,7 @@ const GET_POJECTS = gql`
 const Portfolio = ({ loader }) => {
   PageTitle("Vigil | Portfolio");
 
-  const { loading, error, data } = useQuery(GET_POJECTS);
+  const { loading, error, data } = useQuery(GET_PROJECTS);
   console.log(data);
 
   if (loading)

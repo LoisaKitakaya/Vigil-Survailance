@@ -36,8 +36,8 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog loader={loader} />} />
-          <Route path="/portfolio" element={<Portfolio loader={loader} />} />
-          <Route path="/article/:slug" element={<Article loader={loader} />} />
+          <Route path="/projects" element={<Portfolio loader={loader} />} />
+          <Route path="/blog/:slug" element={<Article loader={loader} />} />
           <Route path="/project/:slug" element={<Project loader={loader} />} />
         </Routes>
         {/* app routes */}

@@ -93,68 +93,7 @@ const Home = ({ loader }) => {
       <IntroBanner />
       {/* component */}
       <div className="this-container">
-        <div className="intro">
-          <div className="intro-caption">
-            <h1>Vigil, the eyes for your business</h1>
-            <br />
-            <p className="fs-4">
-              With Live Video Surveillance, CCTV Monitoring Helps You Secure
-              Your Property.
-            </p>
-            <br />
-            <div className="intro-img">
-              <img src={homeimage} className="img-fluid rounded" alt="..." />
-            </div>
-          </div>
-          {/* ///s */}
-          <form className="card bg-dark" ref={form} onSubmit={sendEmail}>
-            <div className="card-body">
-              <div className="profesional text-center text-light">
-                <img
-                  src={prof}
-                  className="img-thumbnail rounded mx-auto d-block"
-                  alt="..."
-                ></img>
-                <br />
-                <h4>Freedom Loisa</h4>
-                <p>Digital Security Expert</p>
-              </div>
-              <div className="form-floating mb-3">
-                <input
-                  type="text"
-                  name="name"
-                  className="form-control"
-                  placeholder="name@example.com"
-                />
-                <label htmlFor="name">Your name</label>
-              </div>
-              <div className="form-floating mb-3">
-                <input
-                  type="email"
-                  name="email"
-                  className="form-control"
-                  placeholder="name@example.com"
-                />
-                <label htmlFor="email">Email address</label>
-              </div>
-              <div className="form-floating mb-3">
-                <input
-                  type="text"
-                  name="phone"
-                  className="form-control"
-                  placeholder="e.g. +254725131828"
-                />
-                <label htmlFor="phone">Phone number</label>
-              </div>
-              <button type="submit" className="btn btn-warning container-fluid">
-                Get a call back
-              </button>
-            </div>
-            <br />
-          </form>
-        </div>
-        {/* intro */}
-
+        <br />
         {/* why work with us */}
         <div className="reason">
           <h1 className="text-center">Why work with us?</h1>
@@ -249,7 +188,7 @@ const Home = ({ loader }) => {
           </div>
         </div>
         {/* why work with us */}
-        <hr />
+        <br />
         {/* testimonials */}
         <div className="testimonials">
           <h1 className="text-center">Testimonials</h1>
@@ -302,7 +241,70 @@ const Home = ({ loader }) => {
           </div>
         </div>
         {/* testimonials */}
-        <hr />
+        <br />
+        {/* intro */}
+        <div className="intro">
+          <div className="intro-caption">
+            <h1>Vigil, the eyes for your business</h1>
+            <br />
+            <p className="fs-4">
+              With Live Video Surveillance, CCTV Monitoring Helps You Secure
+              Your Property.
+            </p>
+            <br />
+            <div className="intro-img">
+              <img src={homeimage} className="img-fluid rounded" alt="..." />
+            </div>
+          </div>
+          {/* ///s */}
+          <form className="card bg-dark" ref={form} onSubmit={sendEmail}>
+            <div className="card-body">
+              <div className="profesional text-center text-light">
+                <img
+                  src={prof}
+                  className="img-thumbnail rounded mx-auto d-block"
+                  alt="..."
+                ></img>
+                <br />
+                <h4>Freedom Loisa</h4>
+                <p>Digital Security Expert</p>
+              </div>
+              <div className="form-floating mb-3">
+                <input
+                  type="text"
+                  name="name"
+                  className="form-control"
+                  placeholder="name@example.com"
+                />
+                <label htmlFor="name">Your name</label>
+              </div>
+              <div className="form-floating mb-3">
+                <input
+                  type="email"
+                  name="email"
+                  className="form-control"
+                  placeholder="name@example.com"
+                />
+                <label htmlFor="email">Email address</label>
+              </div>
+              <div className="form-floating mb-3">
+                <input
+                  type="text"
+                  name="phone"
+                  className="form-control"
+                  placeholder="e.g. +254725131828"
+                />
+                <label htmlFor="phone">Phone number</label>
+              </div>
+              <button type="submit" className="btn btn-warning container-fluid">
+                Get a call back
+              </button>
+            </div>
+            <br />
+          </form>
+        </div>
+        {/* intro */}
+        <br />
         {/* recent posts */}
         <div className="recent-posts">
           <h1 className="text-center">Recent Posts</h1>
@@ -341,6 +343,7 @@ const Home = ({ loader }) => {
             })}
           </div>
         </div>
+        {/* recent posts */}
       </div>
       <br />
       <br />

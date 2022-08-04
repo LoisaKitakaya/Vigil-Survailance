@@ -67,7 +67,7 @@ const Project = ({ loader }) => {
             />
             <br />
             <br />
-            <h2 className="text-center">{data.project.name}</h2>
+            <h2>{data.project.name}</h2>
             <br />
             <div
               className="content fs-5"
@@ -75,8 +75,10 @@ const Project = ({ loader }) => {
                 __html: data.project.description.html,
               }}
             />
-            {/* <br />
-            <p className="text-muted">Published on: {data.post.createdAt}</p> */}
+            <br />
+            <p className="text-muted">
+              Project by <strong>Vigil surveillance</strong>
+            </p>
           </div>
         </div>
       </div>

@@ -81,11 +81,12 @@ form .row .col-6 {
   margin: 0 0.5rem !important;
 }
 
-/* .col-4 {
+.document img {
+  height: 600px !important;
+  margin: auto !important;
   display: flex !important;
-  align-items: center !important;
-  flex-direction: column !important;
-} */
+  justify-content: center !important;
+}
 
 /* media query for responsiveness */
 
@@ -137,5 +138,9 @@ form .row .col-6 {
   .about-sub img,
   .about-sub-reverse img {
     margin: 0 !important;
+  }
+
+  .document img {
+    height: auto !important;
   }
 }
